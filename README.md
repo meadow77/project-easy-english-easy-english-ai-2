@@ -6,8 +6,11 @@
 
 - Next.js App Router · React · TypeScript · Tailwind CSS
 - PWA manifest · service worker · 오프라인 안내 화면
-- LocalStorage 기반 즐겨찾기, 학습 완료, 복습 일정, 완벽 암기, 통계
-- Web Speech API 기반 발음 듣기와 따라 말하기
+- LocalStorage 기반 체크 상태, 즐겨찾기, 복습 일정, 완벽 암기, 오답노트, 시험 결과, 통계
+- en-US 음성 우선 선택과 Web Speech API 기반 발음 듣기·말하기 평가
+- 540개 회화 핵심 단어를 품사·명사 주제별 JSON으로 관리
+- 10개 초과 품사는 번호형 고밀도 단어장, 기초 품사는 카드 UI
+- 체크한 단어 대상 4종 시험과 자동 오답 저장·재시험
 - Vercel 배포 준비 완료
 
 ## 1. 설치
@@ -80,10 +83,10 @@ vercel
 
 ```text
 app/                 Next.js App Router, 메타데이터, iPhone head 설정
-components/          재사용 가능한 학습 화면과 단어 카드
+components/          학습 화면, 카드/리스트, 말하기 평가, 단어 시험
 public/              manifest, service worker, favicon, Apple 아이콘, splash, offline page
 src/data/            품사별 JSON 콘텐츠
-src/lib/             LocalStorage와 간격 반복 로직
+src/lib/             LocalStorage, 간격 반복, 미국식 음성 로직
 src/types/           TypeScript 타입
 vercel.json          service worker/manifest 캐시 헤더
 ```
@@ -94,15 +97,20 @@ vercel.json          service worker/manifest 캐시 헤더
 
 ```json
 {
-  "id": "unique-id",
+  "id": "noun-055",
   "word": "water",
-  "pronunciation": "워터",
+  "pronunciation": "워러",
   "meaning": "물",
   "partOfSpeech": "명사",
-  "category": "음식",
-  "explanation": "마시는 물이에요.",
-  "example": "Can I have water?"
+  "category": "음료",
+  "explanation": "물을 뜻하며 일상 회화에서 자주 쓰는 명사입니다.",
+  "example": "We talked about water.",
+  "exampleTranslation": "우리는 물에 대해 이야기했어요."
 }
 ```
 
 새 JSON 파일을 추가했다면 `src/data/index.ts`에 import와 목록 추가만 하면 됩니다.
+
+## 음성 기능 참고
+
+발음 재생은 기기에서 제공하는 `en-US` 음성을 우선 사용합니다. 말하기 평가는 브라우저 음성 인식 결과를 활용한 간단한 점수이므로 전문 음성학 분석과는 다릅니다. iPhone에서는 Safari의 마이크 권한을 허용해야 하며, 음성 인식은 브라우저 정책에 따라 인터넷 연결이 필요할 수 있습니다. 단어·예문·체크·복습·오답 데이터는 오프라인에서도 사용할 수 있습니다.

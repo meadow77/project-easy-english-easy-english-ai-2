@@ -1,5 +1,0 @@
-[
-  {"id":"monday","word":"Monday","pronunciation":"먼데이","meaning":"월요일","partOfSpeech":"명사","category":"날짜","explanation":"한 주의 첫날이에요.","example":"See you Monday."},
-  {"id":"friday","word":"Friday","pronunciation":"프라이데이","meaning":"금요일","partOfSpeech":"명사","category":"날짜","explanation":"주말 전날이에요.","example":"See you Friday."},
-  {"id":"sunday","word":"Sunday","pronunciation":"선데이","meaning":"일요일","partOfSpeech":"명사","category":"날짜","explanation":"일주일의 마지막 날이에요.","example":"On Sunday."}
-]

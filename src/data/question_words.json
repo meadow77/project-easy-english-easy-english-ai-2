@@ -1,6 +1,112 @@
 [
-  {"id":"what","word":"what","pronunciation":"왓","meaning":"무엇","partOfSpeech":"의문사","category":"기초","explanation":"사물이나 내용을 물어요.","example":"What is this?"},
-  {"id":"where","word":"where","pronunciation":"웨어","meaning":"어디","partOfSpeech":"의문사","category":"기초","explanation":"장소를 물어요.","example":"Where is the restroom?"},
-  {"id":"when","word":"when","pronunciation":"웬","meaning":"언제","partOfSpeech":"의문사","category":"기초","explanation":"시간을 물어요.","example":"When is the train?"},
-  {"id":"how","word":"how","pronunciation":"하우","meaning":"어떻게, 얼마나","partOfSpeech":"의문사","category":"기초","explanation":"방법이나 정도를 물어요.","example":"How much is it?"}
+  {
+    "id": "question-001",
+    "word": "what",
+    "pronunciation": "왓",
+    "meaning": "무엇",
+    "partOfSpeech": "의문사",
+    "category": "의문사",
+    "explanation": "무엇라는 뜻으로 일상 회화에서 자주 쓰는 의문사입니다.",
+    "example": "What is this?",
+    "exampleTranslation": "이것은 무엇인가요?"
+  },
+  {
+    "id": "question-002",
+    "word": "where",
+    "pronunciation": "웨어",
+    "meaning": "어디",
+    "partOfSpeech": "의문사",
+    "category": "의문사",
+    "explanation": "어디라는 뜻으로 일상 회화에서 자주 쓰는 의문사입니다.",
+    "example": "Where are you?",
+    "exampleTranslation": "어디에 있어요?"
+  },
+  {
+    "id": "question-003",
+    "word": "when",
+    "pronunciation": "웬",
+    "meaning": "언제",
+    "partOfSpeech": "의문사",
+    "category": "의문사",
+    "explanation": "언제라는 뜻으로 일상 회화에서 자주 쓰는 의문사입니다.",
+    "example": "When do we leave?",
+    "exampleTranslation": "우리는 언제 출발해요?"
+  },
+  {
+    "id": "question-004",
+    "word": "who",
+    "pronunciation": "후",
+    "meaning": "누구",
+    "partOfSpeech": "의문사",
+    "category": "의문사",
+    "explanation": "누구라는 뜻으로 일상 회화에서 자주 쓰는 의문사입니다.",
+    "example": "Who is that?",
+    "exampleTranslation": "저 사람은 누구예요?"
+  },
+  {
+    "id": "question-005",
+    "word": "why",
+    "pronunciation": "와이",
+    "meaning": "왜",
+    "partOfSpeech": "의문사",
+    "category": "의문사",
+    "explanation": "왜라는 뜻으로 일상 회화에서 자주 쓰는 의문사입니다.",
+    "example": "Why are you here?",
+    "exampleTranslation": "왜 여기 있어요?"
+  },
+  {
+    "id": "question-006",
+    "word": "how",
+    "pronunciation": "하우",
+    "meaning": "어떻게",
+    "partOfSpeech": "의문사",
+    "category": "의문사",
+    "explanation": "어떻게라는 뜻으로 일상 회화에서 자주 쓰는 의문사입니다.",
+    "example": "How are you?",
+    "exampleTranslation": "어떻게 지내세요?"
+  },
+  {
+    "id": "question-007",
+    "word": "which",
+    "pronunciation": "위치",
+    "meaning": "어느 것",
+    "partOfSpeech": "의문사",
+    "category": "의문사",
+    "explanation": "어느 것라는 뜻으로 일상 회화에서 자주 쓰는 의문사입니다.",
+    "example": "Which one do you want?",
+    "exampleTranslation": "어느 것을 원하세요?"
+  },
+  {
+    "id": "question-008",
+    "word": "whose",
+    "pronunciation": "후즈",
+    "meaning": "누구의",
+    "partOfSpeech": "의문사",
+    "category": "의문사",
+    "explanation": "누구의라는 뜻으로 일상 회화에서 자주 쓰는 의문사입니다.",
+    "example": "Whose bag is this?",
+    "exampleTranslation": "이것은 누구의 가방인가요?"
+  },
+  {
+    "id": "question-009",
+    "word": "how much",
+    "pronunciation": "하우 머치",
+    "meaning": "얼마, 얼마나",
+    "partOfSpeech": "의문사",
+    "category": "의문사",
+    "explanation": "얼마, 얼마나라는 뜻으로 일상 회화에서 자주 쓰는 의문사입니다.",
+    "example": "How much is it?",
+    "exampleTranslation": "이것은 얼마예요?"
+  },
+  {
+    "id": "question-010",
+    "word": "how many",
+    "pronunciation": "하우 메니",
+    "meaning": "몇 개, 얼마나 많은",
+    "partOfSpeech": "의문사",
+    "category": "의문사",
+    "explanation": "몇 개, 얼마나 많은라는 뜻으로 일상 회화에서 자주 쓰는 의문사입니다.",
+    "example": "How many do you need?",
+    "exampleTranslation": "몇 개가 필요하세요?"
+  }
 ]

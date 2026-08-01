@@ -1,6 +1,90 @@
 [
-  {"id":"am","word":"am","pronunciation":"앰","meaning":"~이다","partOfSpeech":"Be동사","category":"기초","explanation":"I와 함께 써요.","example":"I am happy."},
-  {"id":"are","word":"are","pronunciation":"아","meaning":"~이다","partOfSpeech":"Be동사","category":"기초","explanation":"you, we, they와 함께 써요.","example":"You are right."},
-  {"id":"is","word":"is","pronunciation":"이즈","meaning":"~이다","partOfSpeech":"Be동사","category":"기초","explanation":"한 사람이나 하나의 상태를 말해요.","example":"It is easy."},
-  {"id":"be","word":"be","pronunciation":"비","meaning":"~이다, 있다","partOfSpeech":"Be동사","category":"기초","explanation":"can 뒤에서 기본형으로 써요.","example":"Be careful."}
+  {
+    "id": "be-001",
+    "word": "am",
+    "pronunciation": "앰",
+    "meaning": "~이다, ~에 있다",
+    "partOfSpeech": "Be동사",
+    "category": "Be동사",
+    "explanation": "~이다, ~에 있다라는 뜻으로 일상 회화에서 자주 쓰는 Be동사입니다.",
+    "example": "I am fine.",
+    "exampleTranslation": "나는 괜찮아요."
+  },
+  {
+    "id": "be-002",
+    "word": "is",
+    "pronunciation": "이즈",
+    "meaning": "~이다, ~에 있다",
+    "partOfSpeech": "Be동사",
+    "category": "Be동사",
+    "explanation": "~이다, ~에 있다라는 뜻으로 일상 회화에서 자주 쓰는 Be동사입니다.",
+    "example": "She is kind.",
+    "exampleTranslation": "그녀는 친절해요."
+  },
+  {
+    "id": "be-003",
+    "word": "are",
+    "pronunciation": "아르",
+    "meaning": "~이다, ~에 있다",
+    "partOfSpeech": "Be동사",
+    "category": "Be동사",
+    "explanation": "~이다, ~에 있다라는 뜻으로 일상 회화에서 자주 쓰는 Be동사입니다.",
+    "example": "We are ready.",
+    "exampleTranslation": "우리는 준비됐어요."
+  },
+  {
+    "id": "be-004",
+    "word": "was",
+    "pronunciation": "워즈",
+    "meaning": "~였다, ~에 있었다",
+    "partOfSpeech": "Be동사",
+    "category": "Be동사",
+    "explanation": "~였다, ~에 있었다라는 뜻으로 일상 회화에서 자주 쓰는 Be동사입니다.",
+    "example": "It was good.",
+    "exampleTranslation": "그것은 좋았어요."
+  },
+  {
+    "id": "be-005",
+    "word": "were",
+    "pronunciation": "워",
+    "meaning": "~였다, ~에 있었다",
+    "partOfSpeech": "Be동사",
+    "category": "Be동사",
+    "explanation": "~였다, ~에 있었다라는 뜻으로 일상 회화에서 자주 쓰는 Be동사입니다.",
+    "example": "They were here.",
+    "exampleTranslation": "그들은 여기 있었어요."
+  },
+  {
+    "id": "be-006",
+    "word": "be",
+    "pronunciation": "비",
+    "meaning": "~이다, ~이 되다",
+    "partOfSpeech": "Be동사",
+    "category": "Be동사",
+    "explanation": "~이다, ~이 되다라는 뜻으로 일상 회화에서 자주 쓰는 Be동사입니다.",
+    "example": "Please be careful.",
+    "exampleTranslation": "조심해주세요."
+  },
+  {
+    "id": "be-007",
+    "word": "been",
+    "pronunciation": "빈",
+    "meaning": "계속 ~이었다",
+    "partOfSpeech": "Be동사",
+    "category": "Be동사",
+    "explanation": "계속 ~이었다라는 뜻으로 일상 회화에서 자주 쓰는 Be동사입니다.",
+    "example": "I have been busy.",
+    "exampleTranslation": "나는 계속 바빴어요."
+  },
+  {
+    "id": "be-008",
+    "word": "being",
+    "pronunciation": "비잉",
+    "meaning": "~인 상태인",
+    "partOfSpeech": "Be동사",
+    "category": "Be동사",
+    "explanation": "~인 상태인라는 뜻으로 일상 회화에서 자주 쓰는 Be동사입니다.",
+    "example": "You are being kind.",
+    "exampleTranslation": "당신은 친절하게 대해주고 있어요."
+  }
 ]

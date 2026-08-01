@@ -1,0 +1,222 @@
+[
+  {
+    "id": "conj-001",
+    "word": "and",
+    "pronunciation": "앤드",
+    "meaning": "그리고",
+    "partOfSpeech": "접속사",
+    "category": "접속사",
+    "explanation": "그리고라는 뜻으로 일상 회화에서 자주 쓰는 접속사입니다.",
+    "example": "I like coffee and tea.",
+    "exampleTranslation": "나는 커피와 차를 좋아해요."
+  },
+  {
+    "id": "conj-002",
+    "word": "but",
+    "pronunciation": "벗",
+    "meaning": "하지만",
+    "partOfSpeech": "접속사",
+    "category": "접속사",
+    "explanation": "하지만라는 뜻으로 일상 회화에서 자주 쓰는 접속사입니다.",
+    "example": "I am tired, but I am okay.",
+    "exampleTranslation": "피곤하지만 괜찮아요."
+  },
+  {
+    "id": "conj-003",
+    "word": "or",
+    "pronunciation": "오어",
+    "meaning": "또는",
+    "partOfSpeech": "접속사",
+    "category": "접속사",
+    "explanation": "또는라는 뜻으로 일상 회화에서 자주 쓰는 접속사입니다.",
+    "example": "Coffee or tea?",
+    "exampleTranslation": "커피 또는 차 드릴까요?"
+  },
+  {
+    "id": "conj-004",
+    "word": "so",
+    "pronunciation": "소우",
+    "meaning": "그래서",
+    "partOfSpeech": "접속사",
+    "category": "접속사",
+    "explanation": "그래서라는 뜻으로 일상 회화에서 자주 쓰는 접속사입니다.",
+    "example": "It was late, so I left.",
+    "exampleTranslation": "늦어서 나는 떠났어요."
+  },
+  {
+    "id": "conj-005",
+    "word": "because",
+    "pronunciation": "비코즈",
+    "meaning": "왜냐하면, ~때문에",
+    "partOfSpeech": "접속사",
+    "category": "접속사",
+    "explanation": "왜냐하면, ~때문에라는 뜻으로 일상 회화에서 자주 쓰는 접속사입니다.",
+    "example": "I stayed because it rained.",
+    "exampleTranslation": "비가 와서 머물렀어요."
+  },
+  {
+    "id": "conj-006",
+    "word": "if",
+    "pronunciation": "이프",
+    "meaning": "만약 ~라면",
+    "partOfSpeech": "접속사",
+    "category": "접속사",
+    "explanation": "만약 ~라면라는 뜻으로 일상 회화에서 자주 쓰는 접속사입니다.",
+    "example": "Call me if you need help.",
+    "exampleTranslation": "도움이 필요하면 전화하세요."
+  },
+  {
+    "id": "conj-007",
+    "word": "when",
+    "pronunciation": "웬",
+    "meaning": "~할 때",
+    "partOfSpeech": "접속사",
+    "category": "접속사",
+    "explanation": "~할 때라는 뜻으로 일상 회화에서 자주 쓰는 접속사입니다.",
+    "example": "Call me when you arrive.",
+    "exampleTranslation": "도착하면 전화하세요."
+  },
+  {
+    "id": "conj-008",
+    "word": "while",
+    "pronunciation": "와일",
+    "meaning": "~하는 동안",
+    "partOfSpeech": "접속사",
+    "category": "접속사",
+    "explanation": "~하는 동안라는 뜻으로 일상 회화에서 자주 쓰는 접속사입니다.",
+    "example": "Wait here while I check.",
+    "exampleTranslation": "제가 확인하는 동안 여기서 기다리세요."
+  },
+  {
+    "id": "conj-009",
+    "word": "before",
+    "pronunciation": "비포어",
+    "meaning": "~하기 전에",
+    "partOfSpeech": "접속사",
+    "category": "접속사",
+    "explanation": "~하기 전에라는 뜻으로 일상 회화에서 자주 쓰는 접속사입니다.",
+    "example": "Wash your hands before you eat.",
+    "exampleTranslation": "먹기 전에 손을 씻으세요."
+  },
+  {
+    "id": "conj-010",
+    "word": "after",
+    "pronunciation": "애프터",
+    "meaning": "~한 후에",
+    "partOfSpeech": "접속사",
+    "category": "접속사",
+    "explanation": "~한 후에라는 뜻으로 일상 회화에서 자주 쓰는 접속사입니다.",
+    "example": "Rest after you finish.",
+    "exampleTranslation": "끝난 후 쉬세요."
+  },
+  {
+    "id": "conj-011",
+    "word": "although",
+    "pronunciation": "올도우",
+    "meaning": "비록 ~이지만",
+    "partOfSpeech": "접속사",
+    "category": "접속사",
+    "explanation": "비록 ~이지만라는 뜻으로 일상 회화에서 자주 쓰는 접속사입니다.",
+    "example": "Although it was cold, we walked.",
+    "exampleTranslation": "추웠지만 우리는 걸었어요."
+  },
+  {
+    "id": "conj-012",
+    "word": "though",
+    "pronunciation": "도우",
+    "meaning": "그렇지만",
+    "partOfSpeech": "접속사",
+    "category": "접속사",
+    "explanation": "그렇지만라는 뜻으로 일상 회화에서 자주 쓰는 접속사입니다.",
+    "example": "It is small, though it is nice.",
+    "exampleTranslation": "작지만 좋아요."
+  },
+  {
+    "id": "conj-013",
+    "word": "unless",
+    "pronunciation": "언레스",
+    "meaning": "~하지 않는 한",
+    "partOfSpeech": "접속사",
+    "category": "접속사",
+    "explanation": "~하지 않는 한라는 뜻으로 일상 회화에서 자주 쓰는 접속사입니다.",
+    "example": "Do not go unless I call.",
+    "exampleTranslation": "내가 부르지 않으면 가지 마세요."
+  },
+  {
+    "id": "conj-014",
+    "word": "until",
+    "pronunciation": "언틸",
+    "meaning": "~할 때까지",
+    "partOfSpeech": "접속사",
+    "category": "접속사",
+    "explanation": "~할 때까지라는 뜻으로 일상 회화에서 자주 쓰는 접속사입니다.",
+    "example": "Wait until five.",
+    "exampleTranslation": "다섯 시까지 기다리세요."
+  },
+  {
+    "id": "conj-015",
+    "word": "since",
+    "pronunciation": "신스",
+    "meaning": "~한 이래, ~이므로",
+    "partOfSpeech": "접속사",
+    "category": "접속사",
+    "explanation": "~한 이래, ~이므로라는 뜻으로 일상 회화에서 자주 쓰는 접속사입니다.",
+    "example": "I have been here since Monday.",
+    "exampleTranslation": "월요일부터 여기 있었어요."
+  },
+  {
+    "id": "conj-016",
+    "word": "as",
+    "pronunciation": "애즈",
+    "meaning": "~처럼, ~하면서",
+    "partOfSpeech": "접속사",
+    "category": "접속사",
+    "explanation": "~처럼, ~하면서라는 뜻으로 일상 회화에서 자주 쓰는 접속사입니다.",
+    "example": "Do as I say.",
+    "exampleTranslation": "내가 말한 대로 하세요."
+  },
+  {
+    "id": "conj-017",
+    "word": "than",
+    "pronunciation": "댄",
+    "meaning": "~보다",
+    "partOfSpeech": "접속사",
+    "category": "접속사",
+    "explanation": "~보다라는 뜻으로 일상 회화에서 자주 쓰는 접속사입니다.",
+    "example": "This is better than that.",
+    "exampleTranslation": "이것이 저것보다 더 좋아요."
+  },
+  {
+    "id": "conj-018",
+    "word": "whether",
+    "pronunciation": "웨더",
+    "meaning": "~인지 아닌지",
+    "partOfSpeech": "접속사",
+    "category": "접속사",
+    "explanation": "~인지 아닌지라는 뜻으로 일상 회화에서 자주 쓰는 접속사입니다.",
+    "example": "I do not know whether it is open.",
+    "exampleTranslation": "열려 있는지 모르겠어요."
+  },
+  {
+    "id": "conj-019",
+    "word": "both ... and",
+    "pronunciation": "보우쓰 앤드",
+    "meaning": "둘 다",
+    "partOfSpeech": "접속사",
+    "category": "접속사",
+    "explanation": "둘 다라는 뜻으로 일상 회화에서 자주 쓰는 접속사입니다.",
+    "example": "I like both coffee and tea.",
+    "exampleTranslation": "나는 커피와 차 둘 다 좋아해요."
+  },
+  {
+    "id": "conj-020",
+    "word": "either ... or",
+    "pronunciation": "이더 오어",
+    "meaning": "둘 중 하나",
+    "partOfSpeech": "접속사",
+    "category": "접속사",
+    "explanation": "둘 중 하나라는 뜻으로 일상 회화에서 자주 쓰는 접속사입니다.",
+    "example": "Either today or tomorrow is fine.",
+    "exampleTranslation": "오늘이나 내일 중 어느 날도 괜찮아요."
+  }
+]

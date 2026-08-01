@@ -1,6 +1,134 @@
 [
-  {"id":"i","word":"I","pronunciation":"아이","meaning":"나","partOfSpeech":"주어","category":"기초","explanation":"말하는 사람을 가리킬 때 써요.","example":"I am ready."},
-  {"id":"you","word":"you","pronunciation":"유","meaning":"너, 당신","partOfSpeech":"주어","category":"기초","explanation":"상대방을 가리킬 때 써요.","example":"You are kind."},
-  {"id":"we","word":"we","pronunciation":"위","meaning":"우리","partOfSpeech":"주어","category":"기초","explanation":"나와 다른 사람들을 함께 말해요.","example":"We are friends."},
-  {"id":"they","word":"they","pronunciation":"데이","meaning":"그들, 그것들","partOfSpeech":"주어","category":"기초","explanation":"여러 사람이나 물건을 말해요.","example":"They are here."}
+  {
+    "id": "subject-001",
+    "word": "I",
+    "pronunciation": "아이",
+    "meaning": "나, 나는",
+    "partOfSpeech": "주어",
+    "category": "주어",
+    "explanation": "나, 나는라는 뜻으로 일상 회화에서 자주 쓰는 주어입니다.",
+    "example": "I am ready.",
+    "exampleTranslation": "나는 준비됐어요."
+  },
+  {
+    "id": "subject-002",
+    "word": "you",
+    "pronunciation": "유",
+    "meaning": "너, 당신",
+    "partOfSpeech": "주어",
+    "category": "주어",
+    "explanation": "너, 당신라는 뜻으로 일상 회화에서 자주 쓰는 주어입니다.",
+    "example": "You look happy.",
+    "exampleTranslation": "당신은 행복해 보여요."
+  },
+  {
+    "id": "subject-003",
+    "word": "we",
+    "pronunciation": "위",
+    "meaning": "우리",
+    "partOfSpeech": "주어",
+    "category": "주어",
+    "explanation": "우리라는 뜻으로 일상 회화에서 자주 쓰는 주어입니다.",
+    "example": "We can go now.",
+    "exampleTranslation": "우리는 지금 갈 수 있어요."
+  },
+  {
+    "id": "subject-004",
+    "word": "they",
+    "pronunciation": "데이",
+    "meaning": "그들",
+    "partOfSpeech": "주어",
+    "category": "주어",
+    "explanation": "그들라는 뜻으로 일상 회화에서 자주 쓰는 주어입니다.",
+    "example": "They are my friends.",
+    "exampleTranslation": "그들은 내 친구들이에요."
+  },
+  {
+    "id": "subject-005",
+    "word": "he",
+    "pronunciation": "히",
+    "meaning": "그",
+    "partOfSpeech": "주어",
+    "category": "주어",
+    "explanation": "그라는 뜻으로 일상 회화에서 자주 쓰는 주어입니다.",
+    "example": "He is here.",
+    "exampleTranslation": "그는 여기 있어요."
+  },
+  {
+    "id": "subject-006",
+    "word": "she",
+    "pronunciation": "쉬",
+    "meaning": "그녀",
+    "partOfSpeech": "주어",
+    "category": "주어",
+    "explanation": "그녀라는 뜻으로 일상 회화에서 자주 쓰는 주어입니다.",
+    "example": "She speaks English.",
+    "exampleTranslation": "그녀는 영어를 말해요."
+  },
+  {
+    "id": "subject-007",
+    "word": "it",
+    "pronunciation": "잇",
+    "meaning": "그것",
+    "partOfSpeech": "주어",
+    "category": "주어",
+    "explanation": "그것라는 뜻으로 일상 회화에서 자주 쓰는 주어입니다.",
+    "example": "It is easy.",
+    "exampleTranslation": "그것은 쉬워요."
+  },
+  {
+    "id": "subject-008",
+    "word": "this",
+    "pronunciation": "디스",
+    "meaning": "이것",
+    "partOfSpeech": "주어",
+    "category": "주어",
+    "explanation": "이것라는 뜻으로 일상 회화에서 자주 쓰는 주어입니다.",
+    "example": "This is good.",
+    "exampleTranslation": "이것은 좋아요."
+  },
+  {
+    "id": "subject-009",
+    "word": "that",
+    "pronunciation": "댓",
+    "meaning": "저것, 그것",
+    "partOfSpeech": "주어",
+    "category": "주어",
+    "explanation": "저것, 그것라는 뜻으로 일상 회화에서 자주 쓰는 주어입니다.",
+    "example": "That is mine.",
+    "exampleTranslation": "저것은 내 것이에요."
+  },
+  {
+    "id": "subject-010",
+    "word": "these",
+    "pronunciation": "디즈",
+    "meaning": "이것들",
+    "partOfSpeech": "주어",
+    "category": "주어",
+    "explanation": "이것들라는 뜻으로 일상 회화에서 자주 쓰는 주어입니다.",
+    "example": "These are new.",
+    "exampleTranslation": "이것들은 새것이에요."
+  },
+  {
+    "id": "subject-011",
+    "word": "those",
+    "pronunciation": "도우즈",
+    "meaning": "저것들",
+    "partOfSpeech": "주어",
+    "category": "주어",
+    "explanation": "저것들라는 뜻으로 일상 회화에서 자주 쓰는 주어입니다.",
+    "example": "Those are yours.",
+    "exampleTranslation": "저것들은 당신 것이에요."
+  },
+  {
+    "id": "subject-012",
+    "word": "everyone",
+    "pronunciation": "에브리원",
+    "meaning": "모두",
+    "partOfSpeech": "주어",
+    "category": "주어",
+    "explanation": "모두라는 뜻으로 일상 회화에서 자주 쓰는 주어입니다.",
+    "example": "Everyone is welcome.",
+    "exampleTranslation": "모두 환영해요."
+  }
 ]

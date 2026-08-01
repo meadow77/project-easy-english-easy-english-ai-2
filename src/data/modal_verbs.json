@@ -1,6 +1,112 @@
 [
-  {"id":"can","word":"can","pronunciation":"캔","meaning":"~할 수 있다","partOfSpeech":"조동사","category":"기초","explanation":"능력이나 허락을 말해요.","example":"I can speak English."},
-  {"id":"could","word":"could","pronunciation":"쿠드","meaning":"~해 주실 수 있나요","partOfSpeech":"조동사","category":"기초","explanation":"정중하게 부탁할 때 좋아요.","example":"Could you help me?"},
-  {"id":"should","word":"should","pronunciation":"슈드","meaning":"~하는 게 좋다","partOfSpeech":"조동사","category":"기초","explanation":"조언을 말할 때 써요.","example":"You should rest."},
-  {"id":"would","word":"would","pronunciation":"우드","meaning":"~하시겠어요","partOfSpeech":"조동사","category":"기초","explanation":"정중한 제안에 써요.","example":"Would you like tea?"}
+  {
+    "id": "modal-001",
+    "word": "can",
+    "pronunciation": "캔",
+    "meaning": "~할 수 있다",
+    "partOfSpeech": "조동사",
+    "category": "조동사",
+    "explanation": "~할 수 있다라는 뜻으로 일상 회화에서 자주 쓰는 조동사입니다.",
+    "example": "I can help.",
+    "exampleTranslation": "내가 도울 수 있어요."
+  },
+  {
+    "id": "modal-002",
+    "word": "will",
+    "pronunciation": "윌",
+    "meaning": "~할 것이다",
+    "partOfSpeech": "조동사",
+    "category": "조동사",
+    "explanation": "~할 것이다라는 뜻으로 일상 회화에서 자주 쓰는 조동사입니다.",
+    "example": "I will call you.",
+    "exampleTranslation": "내가 전화할게요."
+  },
+  {
+    "id": "modal-003",
+    "word": "could",
+    "pronunciation": "쿠드",
+    "meaning": "~할 수 있었다, ~해주시겠어요",
+    "partOfSpeech": "조동사",
+    "category": "조동사",
+    "explanation": "~할 수 있었다, ~해주시겠어요라는 뜻으로 일상 회화에서 자주 쓰는 조동사입니다.",
+    "example": "Could you help me?",
+    "exampleTranslation": "저를 도와주시겠어요?"
+  },
+  {
+    "id": "modal-004",
+    "word": "would",
+    "pronunciation": "우드",
+    "meaning": "~할 것이다, ~하시겠어요",
+    "partOfSpeech": "조동사",
+    "category": "조동사",
+    "explanation": "~할 것이다, ~하시겠어요라는 뜻으로 일상 회화에서 자주 쓰는 조동사입니다.",
+    "example": "Would you like coffee?",
+    "exampleTranslation": "커피 드시겠어요?"
+  },
+  {
+    "id": "modal-005",
+    "word": "should",
+    "pronunciation": "슈드",
+    "meaning": "~하는 게 좋다",
+    "partOfSpeech": "조동사",
+    "category": "조동사",
+    "explanation": "~하는 게 좋다라는 뜻으로 일상 회화에서 자주 쓰는 조동사입니다.",
+    "example": "You should rest.",
+    "exampleTranslation": "당신은 쉬는 게 좋아요."
+  },
+  {
+    "id": "modal-006",
+    "word": "may",
+    "pronunciation": "메이",
+    "meaning": "~해도 된다, ~일지도 모른다",
+    "partOfSpeech": "조동사",
+    "category": "조동사",
+    "explanation": "~해도 된다, ~일지도 모른다라는 뜻으로 일상 회화에서 자주 쓰는 조동사입니다.",
+    "example": "May I come in?",
+    "exampleTranslation": "들어가도 될까요?"
+  },
+  {
+    "id": "modal-007",
+    "word": "might",
+    "pronunciation": "마이트",
+    "meaning": "~일지도 모른다",
+    "partOfSpeech": "조동사",
+    "category": "조동사",
+    "explanation": "~일지도 모른다라는 뜻으로 일상 회화에서 자주 쓰는 조동사입니다.",
+    "example": "It might rain.",
+    "exampleTranslation": "비가 올지도 몰라요."
+  },
+  {
+    "id": "modal-008",
+    "word": "must",
+    "pronunciation": "머스트",
+    "meaning": "반드시 ~해야 한다",
+    "partOfSpeech": "조동사",
+    "category": "조동사",
+    "explanation": "반드시 ~해야 한다라는 뜻으로 일상 회화에서 자주 쓰는 조동사입니다.",
+    "example": "I must go now.",
+    "exampleTranslation": "나는 지금 가야 해요."
+  },
+  {
+    "id": "modal-009",
+    "word": "have to",
+    "pronunciation": "해브 투",
+    "meaning": "~해야 한다",
+    "partOfSpeech": "조동사",
+    "category": "조동사",
+    "explanation": "~해야 한다라는 뜻으로 일상 회화에서 자주 쓰는 조동사입니다.",
+    "example": "I have to work.",
+    "exampleTranslation": "나는 일해야 해요."
+  },
+  {
+    "id": "modal-010",
+    "word": "need to",
+    "pronunciation": "니드 투",
+    "meaning": "~할 필요가 있다",
+    "partOfSpeech": "조동사",
+    "category": "조동사",
+    "explanation": "~할 필요가 있다라는 뜻으로 일상 회화에서 자주 쓰는 조동사입니다.",
+    "example": "We need to talk.",
+    "exampleTranslation": "우리는 이야기할 필요가 있어요."
+  }
 ]
