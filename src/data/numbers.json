@@ -1,0 +1,6 @@
+[
+  {"id":"number-one","word":"one","pronunciation":"원","meaning":"하나","partOfSpeech":"명사","category":"숫자","explanation":"숫자 1이에요.","example":"One ticket, please."},
+  {"id":"number-two","word":"two","pronunciation":"투","meaning":"둘","partOfSpeech":"명사","category":"숫자","explanation":"숫자 2예요.","example":"Two coffees, please."},
+  {"id":"number-ten","word":"ten","pronunciation":"텐","meaning":"열","partOfSpeech":"명사","category":"숫자","explanation":"숫자 10이에요.","example":"Ten minutes, please."},
+  {"id":"number-hundred","word":"one hundred","pronunciation":"원 헌드레드","meaning":"백","partOfSpeech":"명사","category":"숫자","explanation":"숫자 100이에요.","example":"One hundred dollars."}
+]

@@ -1,0 +1,7 @@
+[
+  {"id":"in","word":"in","pronunciation":"인","meaning":"~안에","partOfSpeech":"전치사","category":"기초","explanation":"공간이나 기간 안을 말해요.","example":"I am in the hotel."},
+  {"id":"at","word":"at","pronunciation":"앳","meaning":"~에","partOfSpeech":"전치사","category":"기초","explanation":"특정 장소나 시간을 말해요.","example":"Meet me at the gate."},
+  {"id":"to","word":"to","pronunciation":"투","meaning":"~로","partOfSpeech":"전치사","category":"기초","explanation":"이동 방향을 말해요.","example":"Go to the station."},
+  {"id":"for","word":"for","pronunciation":"포","meaning":"~을 위해","partOfSpeech":"전치사","category":"기초","explanation":"대상이나 목적을 말해요.","example":"This is for you."},
+  {"id":"from","word":"from","pronunciation":"프럼","meaning":"~에서부터","partOfSpeech":"전치사","category":"기초","explanation":"출발점이나 출신을 말해요.","example":"I am from Korea."}
+]

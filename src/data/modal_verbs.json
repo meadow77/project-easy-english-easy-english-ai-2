@@ -1,0 +1,6 @@
+[
+  {"id":"can","word":"can","pronunciation":"캔","meaning":"~할 수 있다","partOfSpeech":"조동사","category":"기초","explanation":"능력이나 허락을 말해요.","example":"I can speak English."},
+  {"id":"could","word":"could","pronunciation":"쿠드","meaning":"~해 주실 수 있나요","partOfSpeech":"조동사","category":"기초","explanation":"정중하게 부탁할 때 좋아요.","example":"Could you help me?"},
+  {"id":"should","word":"should","pronunciation":"슈드","meaning":"~하는 게 좋다","partOfSpeech":"조동사","category":"기초","explanation":"조언을 말할 때 써요.","example":"You should rest."},
+  {"id":"would","word":"would","pronunciation":"우드","meaning":"~하시겠어요","partOfSpeech":"조동사","category":"기초","explanation":"정중한 제안에 써요.","example":"Would you like tea?"}
+]

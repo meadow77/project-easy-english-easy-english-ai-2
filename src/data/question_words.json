@@ -1,0 +1,6 @@
+[
+  {"id":"what","word":"what","pronunciation":"왓","meaning":"무엇","partOfSpeech":"의문사","category":"기초","explanation":"사물이나 내용을 물어요.","example":"What is this?"},
+  {"id":"where","word":"where","pronunciation":"웨어","meaning":"어디","partOfSpeech":"의문사","category":"기초","explanation":"장소를 물어요.","example":"Where is the restroom?"},
+  {"id":"when","word":"when","pronunciation":"웬","meaning":"언제","partOfSpeech":"의문사","category":"기초","explanation":"시간을 물어요.","example":"When is the train?"},
+  {"id":"how","word":"how","pronunciation":"하우","meaning":"어떻게, 얼마나","partOfSpeech":"의문사","category":"기초","explanation":"방법이나 정도를 물어요.","example":"How much is it?"}
+]

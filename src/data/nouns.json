@@ -1,0 +1,20 @@
+[
+  {"id":"person","word":"person","pronunciation":"퍼슨","meaning":"사람","partOfSpeech":"명사","category":"사람","explanation":"한 명의 사람을 말해요.","example":"He is a nice person."},
+  {"id":"food","word":"food","pronunciation":"푸드","meaning":"음식","partOfSpeech":"명사","category":"음식","explanation":"먹는 것을 말해요.","example":"The food is good."},
+  {"id":"doctor","word":"doctor","pronunciation":"닥터","meaning":"의사","partOfSpeech":"명사","category":"병원","explanation":"환자를 치료하는 사람이에요.","example":"I need a doctor."},
+  {"id":"trip","word":"trip","pronunciation":"트립","meaning":"여행","partOfSpeech":"명사","category":"여행","explanation":"다른 곳으로 떠나는 일이에요.","example":"Have a nice trip."},
+  {"id":"airport","word":"airport","pronunciation":"에어포트","meaning":"공항","partOfSpeech":"명사","category":"공항","explanation":"비행기를 타는 곳이에요.","example":"The airport is near."},
+  {"id":"hotel","word":"hotel","pronunciation":"호텔","meaning":"호텔","partOfSpeech":"명사","category":"호텔","explanation":"여행 중 머무는 곳이에요.","example":"This hotel is clean."},
+  {"id":"shop","word":"shop","pronunciation":"샵","meaning":"가게","partOfSpeech":"명사","category":"쇼핑","explanation":"물건을 사는 곳이에요.","example":"The shop is open."},
+  {"id":"bus","word":"bus","pronunciation":"버스","meaning":"버스","partOfSpeech":"명사","category":"교통","explanation":"사람을 태우는 교통수단이에요.","example":"Take the bus."},
+  {"id":"number","word":"number","pronunciation":"넘버","meaning":"번호, 숫자","partOfSpeech":"명사","category":"숫자","explanation":"순서나 번호를 말해요.","example":"What is your room number?"},
+  {"id":"time","word":"time","pronunciation":"타임","meaning":"시간","partOfSpeech":"명사","category":"시간","explanation":"시각이나 기간을 말해요.","example":"What time is it?"},
+  {"id":"date","word":"date","pronunciation":"데이트","meaning":"날짜","partOfSpeech":"명사","category":"날짜","explanation":"달력의 날짜를 말해요.","example":"What is the date?"},
+  {"id":"family","word":"family","pronunciation":"패밀리","meaning":"가족","partOfSpeech":"명사","category":"가족","explanation":"함께 사는 가까운 사람들이에요.","example":"My family is big."},
+  {"id":"job","word":"job","pronunciation":"잡","meaning":"직업","partOfSpeech":"명사","category":"직업","explanation":"하는 일을 말해요.","example":"What is your job?"},
+  {"id":"feeling","word":"feeling","pronunciation":"필링","meaning":"감정","partOfSpeech":"명사","category":"감정","explanation":"마음의 상태를 말해요.","example":"I have a good feeling."},
+  {"id":"hand","word":"hand","pronunciation":"핸드","meaning":"손","partOfSpeech":"명사","category":"신체","explanation":"팔 끝의 신체 부위예요.","example":"Raise your hand."},
+  {"id":"water","word":"water","pronunciation":"워터","meaning":"물","partOfSpeech":"명사","category":"음식","explanation":"마시는 물이에요.","example":"Can I have water?"},
+  {"id":"ticket","word":"ticket","pronunciation":"티켓","meaning":"표","partOfSpeech":"명사","category":"교통","explanation":"이동이나 입장에 필요한 표예요.","example":"I have a ticket."},
+  {"id":"room","word":"room","pronunciation":"룸","meaning":"방","partOfSpeech":"명사","category":"호텔","explanation":"호텔이나 집 안의 공간이에요.","example":"My room is 305."}
+]

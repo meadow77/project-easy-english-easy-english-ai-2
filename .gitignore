@@ -1,0 +1,15 @@
+.dart_tool/
+.idea/
+.vscode/
+build/
+pubspec.lock
+*.iml
+*.log
+node_modules/
+.next/
+out/
+coverage/
+*.tsbuildinfo
+.env
+.env.local
+.vercel

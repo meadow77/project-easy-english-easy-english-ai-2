@@ -1,0 +1,10 @@
+[
+  {"id":"go","word":"go","pronunciation":"고우","meaning":"가다","partOfSpeech":"일반동사","category":"기본동사","explanation":"어떤 장소로 이동할 때 써요.","example":"I go to work."},
+  {"id":"want","word":"want","pronunciation":"원트","meaning":"원하다","partOfSpeech":"일반동사","category":"기본동사","explanation":"하고 싶은 것을 말해요.","example":"I want water."},
+  {"id":"need","word":"need","pronunciation":"니드","meaning":"필요하다","partOfSpeech":"일반동사","category":"기본동사","explanation":"필요한 것을 말해요.","example":"I need help."},
+  {"id":"like","word":"like","pronunciation":"라이크","meaning":"좋아하다","partOfSpeech":"일반동사","category":"기본동사","explanation":"좋아하는 것을 말해요.","example":"I like coffee."},
+  {"id":"have","word":"have","pronunciation":"해브","meaning":"가지다","partOfSpeech":"일반동사","category":"기본동사","explanation":"가지고 있음을 말해요.","example":"I have a ticket."},
+  {"id":"get","word":"get","pronunciation":"겟","meaning":"얻다, 받다","partOfSpeech":"일반동사","category":"기본동사","explanation":"무언가를 받거나 얻을 때 써요.","example":"I get a coffee."},
+  {"id":"help","word":"help","pronunciation":"헬프","meaning":"돕다","partOfSpeech":"일반동사","category":"기본동사","explanation":"도움을 주거나 요청할 때 써요.","example":"Can you help me?"},
+  {"id":"know","word":"know","pronunciation":"노우","meaning":"알다","partOfSpeech":"일반동사","category":"기본동사","explanation":"정보를 알고 있을 때 써요.","example":"I know this place."}
+]

@@ -1,0 +1,7 @@
+[
+  {"id":"good","word":"good","pronunciation":"굿","meaning":"좋은","partOfSpeech":"형용사","category":"기분·상태","explanation":"좋은 상태를 말해요.","example":"It is good."},
+  {"id":"easy","word":"easy","pronunciation":"이지","meaning":"쉬운","partOfSpeech":"형용사","category":"기분·상태","explanation":"어렵지 않음을 말해요.","example":"English is easy."},
+  {"id":"busy","word":"busy","pronunciation":"비지","meaning":"바쁜","partOfSpeech":"형용사","category":"기분·상태","explanation":"할 일이 많음을 말해요.","example":"I am busy today."},
+  {"id":"hungry","word":"hungry","pronunciation":"헝그리","meaning":"배고픈","partOfSpeech":"형용사","category":"감정","explanation":"배가 고픈 상태예요.","example":"I am hungry."},
+  {"id":"tired","word":"tired","pronunciation":"타이어드","meaning":"피곤한","partOfSpeech":"형용사","category":"감정","explanation":"힘이 빠진 상태예요.","example":"I am tired."}
+]

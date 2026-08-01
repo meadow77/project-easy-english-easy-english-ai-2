@@ -1,0 +1,6 @@
+[
+  {"id":"now","word":"now","pronunciation":"나우","meaning":"지금","partOfSpeech":"부사","category":"시간","explanation":"현재를 말해요.","example":"I need it now."},
+  {"id":"today","word":"today","pronunciation":"투데이","meaning":"오늘","partOfSpeech":"부사","category":"시간","explanation":"현재 날짜를 말해요.","example":"I work today."},
+  {"id":"here","word":"here","pronunciation":"히어","meaning":"여기에","partOfSpeech":"부사","category":"장소","explanation":"말하는 사람 가까운 곳이에요.","example":"Come here, please."},
+  {"id":"very","word":"very","pronunciation":"베리","meaning":"매우","partOfSpeech":"부사","category":"정도","explanation":"정도를 크게 만들어요.","example":"It is very good."}
+]

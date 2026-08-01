@@ -1,0 +1,6 @@
+[
+  {"id":"i","word":"I","pronunciation":"아이","meaning":"나","partOfSpeech":"주어","category":"기초","explanation":"말하는 사람을 가리킬 때 써요.","example":"I am ready."},
+  {"id":"you","word":"you","pronunciation":"유","meaning":"너, 당신","partOfSpeech":"주어","category":"기초","explanation":"상대방을 가리킬 때 써요.","example":"You are kind."},
+  {"id":"we","word":"we","pronunciation":"위","meaning":"우리","partOfSpeech":"주어","category":"기초","explanation":"나와 다른 사람들을 함께 말해요.","example":"We are friends."},
+  {"id":"they","word":"they","pronunciation":"데이","meaning":"그들, 그것들","partOfSpeech":"주어","category":"기초","explanation":"여러 사람이나 물건을 말해요.","example":"They are here."}
+]
