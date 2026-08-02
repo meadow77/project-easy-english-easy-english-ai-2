@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { recognizeWord, type SpeechScore } from '@/src/lib/speech';
+import AppIcon from './AppIcon';
 
 export default function SpeakingPractice({
   target,
@@ -52,7 +53,7 @@ export default function SpeakingPractice({
           disabled={listening}
           className="min-h-11 shrink-0 rounded-xl bg-leaf px-4 text-sm font-extrabold text-white active:scale-[.98] disabled:opacity-60"
         >
-          {listening ? '듣는 중…' : result ? '다시 연습' : '말하기'}
+          <span className="inline-flex items-center gap-1.5"><AppIcon name="speak" size={16} /> {listening ? '듣는 중…' : result ? '다시 연습' : '말하기'}</span>
         </button>
       </div>
 

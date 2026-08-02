@@ -1,3 +1,5 @@
+import type { Word } from '@/src/types';
+
 export type SpeechScore = {
   score: number;
   passed: boolean;
@@ -42,9 +44,24 @@ const preferredVoiceNames = [
   'Microsoft Zira',
 ];
 
+const preferredKoreanVoiceNames = ['Yuna', 'Google 한국의', 'Microsoft SunHi', 'Microsoft Heami'];
+let activeSpeechSession = 0;
+
+export type StudyPlaybackMode = 'en-ko' | 'en-ko-en' | 'ko-en';
+
+export type SpeechSegment = {
+  text: string;
+  lang: 'en-US' | 'ko-KR';
+};
+
 function chooseAmericanVoice(voices: SpeechSynthesisVoice[]) {
   const american = voices.filter((voice) => voice.lang.toLowerCase().replace('_', '-').startsWith('en-us'));
   return preferredVoiceNames.map((name) => american.find((voice) => voice.name.includes(name))).find(Boolean) ?? american[0];
+}
+
+function chooseKoreanVoice(voices: SpeechSynthesisVoice[]) {
+  const korean = voices.filter((voice) => voice.lang.toLowerCase().replace('_', '-').startsWith('ko-kr'));
+  return preferredKoreanVoiceNames.map((name) => korean.find((voice) => voice.name.includes(name))).find(Boolean) ?? korean[0];
 }
 
 export function prepareAmericanVoice() {
@@ -52,18 +69,72 @@ export function prepareAmericanVoice() {
   window.speechSynthesis.getVoices();
 }
 
-export function speakAmericanEnglish(text: string, rate = 0.82) {
-  if (typeof window === 'undefined' || !('speechSynthesis' in window)) return false;
+export function beginSpeechSession() {
+  activeSpeechSession += 1;
+  if (typeof window !== 'undefined') window.speechSynthesis?.cancel();
+  return activeSpeechSession;
+}
+
+export function cancelSpeech() {
+  return beginSpeechSession();
+}
+
+export function isSpeechSessionActive(session: number) {
+  return session === activeSpeechSession;
+}
+
+export function createSpeechUtterance(text: string, lang: SpeechSegment['lang'], rate = 0.82) {
+  if (typeof window === 'undefined' || !('speechSynthesis' in window)) return null;
   const cleanText = text.trim();
-  const utterance = new SpeechSynthesisUtterance(cleanText.toLowerCase() === 'i' ? 'I.' : cleanText);
-  const voice = chooseAmericanVoice(window.speechSynthesis.getVoices());
-  utterance.lang = 'en-US';
+  const utterance = new SpeechSynthesisUtterance(lang === 'en-US' && cleanText.toLowerCase() === 'i' ? 'I.' : cleanText);
+  const voices = window.speechSynthesis.getVoices();
+  utterance.lang = lang;
   utterance.rate = rate;
   utterance.pitch = 1;
   utterance.volume = 1;
+  const voice = lang === 'en-US' ? chooseAmericanVoice(voices) : chooseKoreanVoice(voices);
   if (voice) utterance.voice = voice;
-  window.speechSynthesis.cancel();
+  return utterance;
+}
+
+export function speakAmericanEnglish(text: string, rate = 0.82) {
+  if (typeof window === 'undefined' || !('speechSynthesis' in window)) return false;
+  const utterance = createSpeechUtterance(text, 'en-US', rate);
+  if (!utterance) return false;
+  beginSpeechSession();
   window.speechSynthesis.speak(utterance);
+  return true;
+}
+
+export function getStudySpeechSegments(word: Pick<Word, 'word' | 'meaning'>, mode: StudyPlaybackMode = 'en-ko'): SpeechSegment[] {
+  const english: SpeechSegment = { text: word.word, lang: 'en-US' };
+  const korean: SpeechSegment = { text: word.meaning, lang: 'ko-KR' };
+  if (mode === 'ko-en') return [korean, english];
+  if (mode === 'en-ko-en') return [english, korean, english];
+  return [english, korean];
+}
+
+export function speakWordWithMeaning(word: Pick<Word, 'word' | 'meaning'>, rate = 0.82, mode: StudyPlaybackMode = 'en-ko') {
+  if (typeof window === 'undefined' || !('speechSynthesis' in window)) return false;
+  const segments = getStudySpeechSegments(word, mode);
+  let index = 0;
+  const session = beginSpeechSession();
+
+  const speakNext = () => {
+    if (!isSpeechSessionActive(session)) return;
+    const segment = segments[index];
+    if (!segment) return;
+    const utterance = createSpeechUtterance(segment.text, segment.lang, rate);
+    if (!utterance) return;
+    utterance.onend = () => {
+      if (!isSpeechSessionActive(session)) return;
+      index += 1;
+      window.setTimeout(speakNext, 180);
+    };
+    window.speechSynthesis.speak(utterance);
+  };
+
+  speakNext();
   return true;
 }
 

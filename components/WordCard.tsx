@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { speakAmericanEnglish } from '@/src/lib/speech';
+import { speakAmericanEnglish, speakWordWithMeaning } from '@/src/lib/speech';
+import AppIcon from './AppIcon';
 import SpeakingPractice from './SpeakingPractice';
 import type { WordStudyProps } from './word-study-types';
 
@@ -37,16 +38,16 @@ export default function WordCard({
           aria-label={favorite ? '즐겨찾기 해제' : '즐겨찾기에 저장'}
           className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl text-2xl transition active:scale-95 ${favorite ? 'bg-amber-100 text-amber-600' : 'bg-slate-100 text-slate-400'}`}
         >
-          {favorite ? '★' : '☆'}
+          <AppIcon name="bookmark" size={22} />
         </button>
       </div>
 
       <p className="mt-5 rounded-2xl bg-slate-50 px-4 py-3 text-sm leading-6 text-ink">{word.explanation}</p>
 
       <div className="mt-4 grid grid-cols-3 gap-2">
-        <button type="button" onClick={() => speakAmericanEnglish(word.word)} className="min-h-[52px] rounded-2xl bg-mint px-2 text-sm font-extrabold text-leaf active:scale-[.98]" aria-label={`${word.word} 미국식 발음 듣기`}>🔊<span className="ml-1 hidden min-[360px]:inline">발음</span></button>
-        <button type="button" onClick={() => setShowPractice((value) => !value)} className={`min-h-[52px] rounded-2xl px-2 text-sm font-extrabold active:scale-[.98] ${showPractice ? 'bg-leaf text-white' : 'border border-emerald-200 text-leaf'}`}>🗣<span className="ml-1 hidden min-[360px]:inline">말하기</span></button>
-        <button type="button" onClick={() => setShowExample((value) => !value)} className={`min-h-[52px] rounded-2xl px-2 text-sm font-extrabold active:scale-[.98] ${showExample ? 'bg-slate-800 text-white' : 'border border-slate-200 text-ink'}`}>📖<span className="ml-1 hidden min-[360px]:inline">예문</span></button>
+        <button type="button" onClick={() => speakWordWithMeaning(word)} className="flex min-h-[52px] items-center justify-center rounded-2xl bg-mint px-2 text-sm font-extrabold text-leaf active:scale-[.98]" aria-label={`${word.word}와 한국어 뜻 듣기`}><AppIcon name="listen" size={18} /><span className="ml-1 hidden min-[360px]:inline">듣기</span></button>
+        <button type="button" onClick={() => setShowPractice((value) => !value)} className={`flex min-h-[52px] items-center justify-center rounded-2xl px-2 text-sm font-extrabold active:scale-[.98] ${showPractice ? 'bg-leaf text-white' : 'border border-emerald-200 text-leaf'}`}><AppIcon name="speak" size={18} /><span className="ml-1 hidden min-[360px]:inline">말하기</span></button>
+        <button type="button" onClick={() => setShowExample((value) => !value)} className={`flex min-h-[52px] items-center justify-center rounded-2xl px-2 text-sm font-extrabold active:scale-[.98] ${showExample ? 'bg-slate-800 text-white' : 'border border-slate-200 text-ink'}`}><AppIcon name="example" size={18} /><span className="ml-1 hidden min-[360px]:inline">예문</span></button>
       </div>
 
       {showPractice && <div className="mt-3"><SpeakingPractice target={word.word} onEvaluated={onReview} /></div>}
@@ -55,7 +56,7 @@ export default function WordCard({
         <div className="mt-3 rounded-2xl border border-dashed border-leaf/30 bg-emerald-50 px-4 py-3">
           <div className="flex items-center justify-between gap-2">
             <p className="text-xs font-bold text-leaf">예문</p>
-            <button type="button" onClick={() => speakAmericanEnglish(word.example, 0.78)} className="min-h-10 rounded-xl bg-white px-3 text-xs font-extrabold text-leaf shadow-sm">🔊 예문 듣기</button>
+            <button type="button" onClick={() => speakAmericanEnglish(word.example, 0.78)} className="flex min-h-10 items-center gap-1 rounded-xl bg-white px-3 text-xs font-extrabold text-leaf shadow-sm"><AppIcon name="listen" size={15} /> 예문 듣기</button>
           </div>
           <p className="mt-1 text-lg font-bold leading-7 text-ink">{word.example}</p>
           <p className="mt-1 text-sm leading-6 text-muted">{word.exampleTranslation}</p>
@@ -68,14 +69,14 @@ export default function WordCard({
           onClick={onToggleWrong}
           className={`min-h-12 rounded-xl px-3 text-sm font-extrabold active:scale-[.98] ${wrong ? 'bg-rose-100 text-rose-700' : 'bg-slate-100 text-muted'}`}
         >
-          📝 {wrong ? '오답 저장됨' : '오답노트'}
+          <span className="inline-flex items-center gap-1"><AppIcon name="note" size={17} /> {wrong ? '오답 저장됨' : '오답노트'}</span>
         </button>
         <button
           type="button"
           onClick={onToggleCompleted}
           className={`min-h-12 rounded-xl px-3 text-sm font-extrabold active:scale-[.98] ${completed ? 'bg-leaf text-white' : 'bg-emerald-50 text-leaf'}`}
         >
-          {completed ? '☑ 외웠어요' : '☐ 아직 안 외움'}
+          <span className="inline-flex items-center gap-1"><AppIcon name={completed ? 'check' : 'uncheck'} size={17} /> {completed ? '외웠어요' : '아직 안 외움'}</span>
         </button>
       </div>
       {progress && progress.correctStreak > 0 && <p className="mt-3 text-center text-xs text-muted">연속 정답 {progress.correctStreak}회 · {progress.interval}일 후 복습</p>}

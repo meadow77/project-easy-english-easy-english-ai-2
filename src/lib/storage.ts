@@ -33,6 +33,9 @@ export function loadState(): StoredState {
         lastStudyDate: parsed.stats?.lastStudyDate,
       },
       testResults: Array.isArray(parsed.testResults) ? parsed.testResults.slice(-100) : [],
+      dailyPlan: parsed.dailyPlan && typeof parsed.dailyPlan.date === 'string'
+        ? { date: parsed.dailyPlan.date, wordIds: unique(parsed.dailyPlan.wordIds) }
+        : undefined,
     };
   } catch {
     return INITIAL_STATE;
@@ -92,6 +95,35 @@ export function setWordCompleted(state: StoredState, wordId: string, completed: 
     completedWordIds: withId(state.completedWordIds, wordId, completed),
     progress,
   };
+}
+
+export function setWordsCompleted(state: StoredState, wordIds: string[], completed: boolean): StoredState {
+  const ids = unique(wordIds);
+  if (!ids.length) return state;
+
+  return ids.reduce((nextState, wordId) => setWordCompleted(nextState, wordId, completed), state);
+}
+
+export function ensureTodayPlan(state: StoredState, sourceWords: Word[]): StoredState {
+  const today = dayKey();
+  const validIds = new Set(sourceWords.map((word) => word.id));
+  const savedIds = state.dailyPlan?.date === today
+    ? state.dailyPlan.wordIds.filter((wordId) => validIds.has(wordId))
+    : [];
+
+  if (savedIds.length === 20 || (savedIds.length > 0 && sourceWords.length < 20)) {
+    return { ...state, dailyPlan: { date: today, wordIds: savedIds } };
+  }
+
+  const selected = new Set(savedIds);
+  const unlearned = sourceWords.filter((word) => !state.completedWordIds.includes(word.id));
+  const candidates = [...dueWords(sourceWords, state), ...unlearned, ...sourceWords];
+  for (const word of candidates) {
+    if (selected.size >= 20) break;
+    selected.add(word.id);
+  }
+
+  return { ...state, dailyPlan: { date: today, wordIds: [...selected].slice(0, 20) } };
 }
 
 export function toggleFavorite(state: StoredState, wordId: string): StoredState {

@@ -39,6 +39,11 @@ export type TestResult = {
   wrongWordIds: string[];
 };
 
+export type DailyPlan = {
+  date: string;
+  wordIds: string[];
+};
+
 export type StoredState = {
   favorites: string[];
   completedWordIds: string[];
@@ -46,6 +51,7 @@ export type StoredState = {
   progress: Record<string, WordProgress>;
   stats: LearningStats;
   testResults: TestResult[];
+  dailyPlan?: DailyPlan;
 };
 
 export type Tab = 'today' | 'words' | 'review' | 'favorites' | 'search';

@@ -3,6 +3,7 @@
 import { useMemo, useState } from 'react';
 import { recognizeWord, speakAmericanEnglish, type SpeechScore } from '@/src/lib/speech';
 import type { TestMode, TestResult, Word } from '@/src/types';
+import AppIcon, { type AppIconName } from './AppIcon';
 
 type Answer = {
   word: Word;
@@ -10,11 +11,11 @@ type Answer = {
   response: string;
 };
 
-const modeOptions: { id: TestMode; title: string; description: string; icon: string }[] = [
-  { id: 'en-ko', title: '영어 → 한국어', description: '영어를 보고 뜻 고르기', icon: 'A' },
-  { id: 'ko-en', title: '한국어 → 영어', description: '뜻을 보고 단어 고르기', icon: '가' },
-  { id: 'listening', title: '발음 듣고 맞추기', description: '소리를 듣고 뜻 고르기', icon: '🔊' },
-  { id: 'speaking', title: '말하기 시험', description: '뜻을 보고 영어로 말하기', icon: '🗣' },
+const modeOptions: { id: TestMode; title: string; description: string; icon: AppIconName }[] = [
+  { id: 'en-ko', title: '영어 → 한국어', description: '영어를 보고 뜻 고르기', icon: 'words' },
+  { id: 'ko-en', title: '한국어 → 영어', description: '뜻을 보고 단어 고르기', icon: 'example' },
+  { id: 'listening', title: '발음 듣고 맞추기', description: '소리를 듣고 뜻 고르기', icon: 'listen' },
+  { id: 'speaking', title: '말하기 시험', description: '뜻을 보고 영어로 말하기', icon: 'speak' },
 ];
 
 function shuffle<T>(items: T[]) {
@@ -153,7 +154,7 @@ export default function CategoryTest({
             <p className="text-xs font-extrabold text-leaf">단어 시험</p>
             <h2 className="mt-1 text-2xl font-black tracking-tight text-ink">{title}</h2>
           </div>
-          <button type="button" onClick={onClose} className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-xl font-bold text-muted shadow-sm" aria-label="시험 닫기">×</button>
+          <button type="button" onClick={onClose} className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-muted shadow-sm" aria-label="시험 닫기"><AppIcon name="close" size={19} /></button>
         </div>
 
         {phase === 'setup' && (
@@ -166,7 +167,7 @@ export default function CategoryTest({
             <div className="grid grid-cols-2 gap-2">
               {modeOptions.map((option) => (
                 <button key={option.id} type="button" onClick={() => setMode(option.id)} className={`min-h-24 rounded-2xl border p-3 text-left active:scale-[.98] ${mode === option.id ? 'border-leaf bg-mint' : 'border-slate-200 bg-white'}`}>
-                  <span className="text-xl">{option.icon}</span>
+                  <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-white/70 text-leaf"><AppIcon name={option.icon} size={18} /></span>
                   <span className="mt-2 block text-sm font-extrabold text-ink">{option.title}</span>
                   <span className="mt-1 block text-[11px] leading-4 text-muted">{option.description}</span>
                 </button>
@@ -199,8 +200,8 @@ export default function CategoryTest({
             <div className="mt-7 rounded-[28px] bg-white p-6 text-center shadow-soft">
               {mode === 'en-ko' && <><p className="text-sm font-bold text-muted">뜻을 골라보세요</p><p className="mt-4 text-4xl font-black text-ink">{question.word}</p><p className="mt-2 text-sm font-semibold text-muted">({question.pronunciation})</p></>}
               {mode === 'ko-en' && <><p className="text-sm font-bold text-muted">영어 단어를 골라보세요</p><p className="mt-4 text-3xl font-black text-ink">{question.meaning}</p></>}
-              {mode === 'listening' && <><p className="text-sm font-bold text-muted">발음을 듣고 뜻을 골라보세요</p><button type="button" onClick={() => speakAmericanEnglish(question.word)} className="mx-auto mt-5 flex h-20 w-20 items-center justify-center rounded-full bg-mint text-4xl text-leaf active:scale-95" aria-label="문제 발음 듣기">🔊</button><p className="mt-3 text-xs font-semibold text-muted">버튼을 눌러 여러 번 들을 수 있어요.</p></>}
-              {mode === 'speaking' && <><p className="text-sm font-bold text-muted">영어로 말해보세요</p><p className="mt-4 text-3xl font-black text-ink">{question.meaning}</p><p className="mt-2 text-sm font-semibold text-muted">힌트: ({question.pronunciation})</p><button type="button" onClick={startSpeaking} disabled={listening || Boolean(pendingAnswer)} className="mt-5 min-h-14 rounded-2xl bg-leaf px-6 text-sm font-black text-white disabled:opacity-60">{listening ? '듣는 중…' : '🗣 말하기'}</button></>}
+              {mode === 'listening' && <><p className="text-sm font-bold text-muted">발음을 듣고 뜻을 골라보세요</p><button type="button" onClick={() => speakAmericanEnglish(question.word)} className="mx-auto mt-5 flex h-20 w-20 items-center justify-center rounded-full bg-mint text-leaf active:scale-95" aria-label="문제 발음 듣기"><AppIcon name="listen" size={34} /></button><p className="mt-3 text-xs font-semibold text-muted">버튼을 눌러 여러 번 들을 수 있어요.</p></>}
+              {mode === 'speaking' && <><p className="text-sm font-bold text-muted">영어로 말해보세요</p><p className="mt-4 text-3xl font-black text-ink">{question.meaning}</p><p className="mt-2 text-sm font-semibold text-muted">힌트: ({question.pronunciation})</p><button type="button" onClick={startSpeaking} disabled={listening || Boolean(pendingAnswer)} className="mt-5 inline-flex min-h-14 items-center gap-2 rounded-2xl bg-leaf px-6 text-sm font-black text-white disabled:opacity-60"><AppIcon name="speak" size={18} /> {listening ? '듣는 중…' : '말하기'}</button></>}
             </div>
 
             {mode !== 'speaking' && (
@@ -247,7 +248,7 @@ export default function CategoryTest({
                 <div key={`${answer.word.id}-${index}`} className={`rounded-2xl border p-3 ${answer.correct ? 'border-emerald-100 bg-white' : 'border-rose-200 bg-rose-50'}`}>
                   <div className="flex items-center justify-between gap-2">
                     <p className="font-extrabold text-ink">{index + 1}. {answer.word.word} <span className="text-sm font-semibold text-muted">({answer.word.pronunciation})</span></p>
-                    <span className={answer.correct ? 'text-leaf' : 'text-rose-600'}>{answer.correct ? '✓' : '✕'}</span>
+                    <span className={answer.correct ? 'text-leaf' : 'text-rose-600'}><AppIcon name={answer.correct ? 'check' : 'close'} size={18} /></span>
                   </div>
                   <p className="mt-1 text-sm text-muted">정답: {answer.word.meaning}</p>
                   {!answer.correct && <p className="mt-1 text-xs text-rose-700">내 답: {answer.response}</p>}
