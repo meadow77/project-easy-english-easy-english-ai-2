@@ -1,0 +1,578 @@
+{
+  "templates": {
+    "주어": [
+      { "english": "{word} can sit here.", "korean": "여기에 앉을 수 있어요." },
+      { "english": "{word} looks happy today.", "korean": "오늘 행복해 보여요." },
+      { "english": "{word} is ready to go.", "korean": "출발할 준비가 되었어요." }
+    ],
+    "Be동사": [
+      { "english": "I {word} ready now.", "korean": "저는 지금 준비됐어요." },
+      { "english": "They {word} at the station.", "korean": "그들은 역에 있어요." },
+      { "english": "This will {word} easy.", "korean": "이것은 쉬울 거예요." }
+    ],
+    "일반동사": [
+      { "english": "I {word} every day.", "korean": "저는 매일 그렇게 해요." },
+      { "english": "Can you {word} with me?", "korean": "저와 함께 해줄 수 있나요?" },
+      { "english": "Let's {word} after work.", "korean": "일이 끝난 뒤 함께 해요." }
+    ],
+    "조동사": [
+      { "english": "I {word} help you.", "korean": "제가 도와드릴 수 있어요." },
+      { "english": "{word} you wait a moment?", "korean": "잠시 기다려 주실 수 있나요?" },
+      { "english": "We {word} leave soon.", "korean": "우리는 곧 떠날 거예요." }
+    ],
+    "의문사": [
+      { "english": "{word} do you need?", "korean": "무엇이 필요하세요?" },
+      { "english": "{word} can I find it?", "korean": "어디에서 찾을 수 있나요?" },
+      { "english": "{word} are we leaving?", "korean": "우리는 언제 출발하나요?" }
+    ],
+    "전치사": [
+      { "english": "The keys are {word} the table.", "korean": "열쇠는 탁자 근처에 있어요." },
+      { "english": "Please come {word} me.", "korean": "저와 함께 와 주세요." },
+      { "english": "I will meet you {word} the station.", "korean": "역에서 만날게요." }
+    ],
+    "형용사": [
+      { "english": "This place is {word}.", "korean": "이곳은 그런 느낌이에요." },
+      { "english": "You look {word} today.", "korean": "오늘 그렇게 보여요." },
+      { "english": "That is a {word} idea.", "korean": "좋은 생각이에요." }
+    ],
+    "부사": [
+      { "english": "Please speak {word}.", "korean": "천천히 또렷하게 말해 주세요." },
+      { "english": "I will do it {word}.", "korean": "그렇게 할게요." },
+      { "english": "We can talk {word}.", "korean": "나중에 이야기할 수 있어요." }
+    ],
+    "접속사": [
+      { "english": "I was tired, {word} I finished my work.", "korean": "피곤했지만 일을 마쳤어요." },
+      { "english": "Call me {word} you arrive.", "korean": "도착하면 전화해 주세요." },
+      { "english": "Coffee {word} tea is fine.", "korean": "커피나 차 모두 괜찮아요." }
+    ],
+    "명사": [
+      { "english": "I need the {word}.", "korean": "그것이 필요해요." },
+      { "english": "Where is the {word}?", "korean": "어디에 있나요?" },
+      { "english": "The {word} is nearby.", "korean": "가까이에 있어요." }
+    ],
+    "default": [
+      { "english": "Please show me {word}.", "korean": "보여 주세요." },
+      { "english": "I use {word} every day.", "korean": "매일 사용해요." },
+      { "english": "Let's talk about {word}.", "korean": "이것에 관해 이야기해요." }
+    ]
+  },
+  "categories": {
+    "음식": [
+      { "english": "I would like {word}.", "korean": "{meaning}을(를) 먹고 싶어요." },
+      { "english": "Let's share the {word}.", "korean": "{meaning}을(를) 같이 먹어요." },
+      { "english": "The {word} looks good.", "korean": "{meaning}이 맛있어 보여요." }
+    ],
+    "음료": [
+      { "english": "Can I have {word}?", "korean": "{meaning}을(를) 받을 수 있을까요?" },
+      { "english": "I need some {word}.", "korean": "{meaning}이 조금 필요해요." },
+      { "english": "The {word} is cold.", "korean": "{meaning}이 차가워요." }
+    ],
+    "공항": [
+      { "english": "Where is the {word}?", "korean": "{meaning}은 어디에 있나요?" },
+      { "english": "I need to find the {word}.", "korean": "{meaning}을(를) 찾아야 해요." },
+      { "english": "The {word} is this way.", "korean": "{meaning}은 이쪽이에요." }
+    ],
+    "호텔": [
+      { "english": "Is the {word} available?", "korean": "{meaning}을(를) 이용할 수 있나요?" },
+      { "english": "I need the {word}, please.", "korean": "{meaning}이 필요해요." },
+      { "english": "Where is the {word}?", "korean": "{meaning}은 어디에 있나요?" }
+    ],
+    "병원": [
+      { "english": "I need the {word}.", "korean": "{meaning}이 필요해요." },
+      { "english": "Where is the {word}?", "korean": "{meaning}은 어디에 있나요?" },
+      { "english": "The {word} is nearby.", "korean": "{meaning}이 가까이에 있어요." }
+    ],
+    "교통": [
+      { "english": "Where can I take the {word}?", "korean": "{meaning}은 어디에서 타나요?" },
+      { "english": "The {word} is coming soon.", "korean": "{meaning}이 곧 와요." },
+      { "english": "I need a {word} today.", "korean": "오늘 {meaning}이 필요해요." }
+    ],
+    "여행": [
+      { "english": "I need my {word}.", "korean": "{meaning}이 필요해요." },
+      { "english": "Where is the {word}?", "korean": "{meaning}은 어디에 있나요?" },
+      { "english": "Please check the {word}.", "korean": "{meaning}을(를) 확인해 주세요." }
+    ],
+    "쇼핑": [
+      { "english": "How much is the {word}?", "korean": "{meaning}은 얼마인가요?" },
+      { "english": "I would like this {word}.", "korean": "이 {meaning}을(를) 원해요." },
+      { "english": "Can I try the {word}?", "korean": "{meaning}을(를) 써봐도 될까요?" }
+    ],
+    "나라": [
+      { "english": "{word} is a beautiful country.", "korean": "{meaning}은 아름다운 나라예요." },
+      { "english": "I hope to visit {word}.", "korean": "{meaning}에 가보고 싶어요." },
+      { "english": "My friend is from {word}.", "korean": "제 친구는 {meaning}에서 왔어요." }
+    ],
+    "숫자": [
+      { "english": "The number is {word}.", "korean": "숫자는 {meaning}이에요." },
+      { "english": "Please say {word} again.", "korean": "{meaning}을(를) 다시 말해 주세요." },
+      { "english": "I need {word} tickets.", "korean": "표가 {meaning}장 필요해요." }
+    ],
+    "시간": [
+      { "english": "I will see you {word}.", "korean": "{meaning}에 만나요." },
+      { "english": "{word} works for me.", "korean": "{meaning}이면 괜찮아요." },
+      { "english": "Let's talk {word}.", "korean": "{meaning}에 이야기해요." }
+    ],
+    "날씨": [
+      { "english": "Check the {word} before you go.", "korean": "가기 전에 {meaning}을(를) 확인하세요." },
+      { "english": "The {word} may change later.", "korean": "{meaning}은 나중에 바뀔 수 있어요." },
+      { "english": "I like this {word}.", "korean": "이런 {meaning}이 좋아요." }
+    ]
+  },
+  "special": {
+    "i": [
+      { "english": "I am ready.", "korean": "저는 준비됐어요." },
+      { "english": "I need some help.", "korean": "도움이 조금 필요해요." },
+      { "english": "I live near here.", "korean": "저는 이 근처에 살아요." }
+    ],
+    "you": [
+      { "english": "You can sit here.", "korean": "여기에 앉아도 돼요." },
+      { "english": "You look great today.", "korean": "오늘 멋져 보여요." },
+      { "english": "Are you ready to go?", "korean": "갈 준비됐나요?" }
+    ],
+    "we": [
+      { "english": "We can go now.", "korean": "우리는 지금 갈 수 있어요." },
+      { "english": "We need more time.", "korean": "시간이 더 필요해요." },
+      { "english": "We are in the right place.", "korean": "우리는 맞는 곳에 있어요." }
+    ],
+    "they": [
+      { "english": "They are waiting outside.", "korean": "그들은 밖에서 기다리고 있어요." },
+      { "english": "They can help us.", "korean": "그들이 우리를 도울 수 있어요." },
+      { "english": "Where are they now?", "korean": "그들은 지금 어디에 있나요?" }
+    ],
+    "am": [
+      { "english": "I am at the hotel.", "korean": "저는 호텔에 있어요." },
+      { "english": "I am hungry.", "korean": "저는 배고파요." },
+      { "english": "I am on my way.", "korean": "가는 중이에요." }
+    ],
+    "is": [
+      { "english": "The store is open.", "korean": "가게가 열려 있어요." },
+      { "english": "Is this your bag?", "korean": "이것은 당신 가방인가요?" },
+      { "english": "My room is upstairs.", "korean": "제 방은 위층에 있어요." }
+    ],
+    "are": [
+      { "english": "Are you okay?", "korean": "괜찮나요?" },
+      { "english": "We are almost there.", "korean": "거의 다 왔어요." },
+      { "english": "The keys are on the table.", "korean": "열쇠는 탁자 위에 있어요." }
+    ],
+    "can": [
+      { "english": "Can you help me?", "korean": "도와줄 수 있나요?" },
+      { "english": "I can pay by card.", "korean": "카드로 결제할 수 있어요." },
+      { "english": "You can sit here.", "korean": "여기에 앉아도 돼요." }
+    ],
+    "will": [
+      { "english": "I will call you later.", "korean": "나중에 전화할게요." },
+      { "english": "We will be there soon.", "korean": "우리는 곧 도착할 거예요." },
+      { "english": "Will you join us?", "korean": "우리와 함께할 건가요?" }
+    ],
+    "what": [
+      { "english": "What is this?", "korean": "이것은 무엇인가요?" },
+      { "english": "What do you recommend?", "korean": "무엇을 추천하나요?" },
+      { "english": "What time is it?", "korean": "몇 시인가요?" }
+    ],
+    "where": [
+      { "english": "Where is the restroom?", "korean": "화장실은 어디에 있나요?" },
+      { "english": "Where are you from?", "korean": "어디에서 왔나요?" },
+      { "english": "Where should I go?", "korean": "어디로 가야 하나요?" }
+    ],
+    "when": [
+      { "english": "When does the store open?", "korean": "가게는 언제 열나요?" },
+      { "english": "When can we meet?", "korean": "언제 만날 수 있나요?" },
+      { "english": "Call me when you arrive.", "korean": "도착하면 전화해 주세요." }
+    ],
+    "go": [
+      { "english": "I go to school every day.", "korean": "저는 매일 학교에 가요." },
+      { "english": "Let's go together.", "korean": "같이 가요." },
+      { "english": "Go straight.", "korean": "곧장 가세요." }
+    ],
+    "come": [
+      { "english": "Come with me.", "korean": "저와 함께 가요." },
+      { "english": "Can you come now?", "korean": "지금 올 수 있나요?" },
+      { "english": "Please come in.", "korean": "들어오세요." }
+    ],
+    "eat": [
+      { "english": "I eat breakfast at 8.", "korean": "저는 8시에 아침을 먹어요." },
+      { "english": "Let's eat lunch.", "korean": "점심 먹어요." },
+      { "english": "What do you want to eat?", "korean": "무엇을 먹고 싶나요?" }
+    ],
+    "drink": [
+      { "english": "I drink coffee every morning.", "korean": "저는 매일 아침 커피를 마셔요." },
+      { "english": "Would you like something to drink?", "korean": "마실 것 좀 드릴까요?" },
+      { "english": "Drink some water.", "korean": "물을 좀 마셔요." }
+    ],
+    "have": [
+      { "english": "I have a question.", "korean": "질문이 있어요." },
+      { "english": "Do you have a minute?", "korean": "잠깐 시간 있나요?" },
+      { "english": "Let's have dinner.", "korean": "저녁 먹어요." }
+    ],
+    "need": [
+      { "english": "I need some help.", "korean": "도움이 필요해요." },
+      { "english": "Do you need a receipt?", "korean": "영수증이 필요하신가요?" },
+      { "english": "We need to leave now.", "korean": "우리는 지금 떠나야 해요." }
+    ],
+    "want": [
+      { "english": "I want a cup of coffee.", "korean": "커피 한 잔을 원해요." },
+      { "english": "What do you want to do?", "korean": "무엇을 하고 싶나요?" },
+      { "english": "Do you want to join us?", "korean": "우리와 함께하고 싶나요?" }
+    ],
+    "hospital": [
+      { "english": "I'm at the hospital.", "korean": "저는 병원에 있어요." },
+      { "english": "Go to the hospital.", "korean": "병원에 가세요." },
+      { "english": "The hospital is nearby.", "korean": "병원이 가까이에 있어요." }
+    ],
+    "airport": [
+      { "english": "I am at the airport.", "korean": "저는 공항에 있어요." },
+      { "english": "How do I get to the airport?", "korean": "공항에는 어떻게 가나요?" },
+      { "english": "The airport is busy today.", "korean": "오늘 공항이 붐벼요." }
+    ],
+    "hotel": [
+      { "english": "My hotel is nearby.", "korean": "제 호텔이 가까이에 있어요." },
+      { "english": "Can you call the hotel?", "korean": "호텔에 전화해 줄 수 있나요?" },
+      { "english": "The hotel has free Wi-Fi.", "korean": "호텔에 무료 와이파이가 있어요." }
+    ],
+    "coffee": [
+      { "english": "I would like a coffee.", "korean": "커피 한 잔 주세요." },
+      { "english": "This coffee is hot.", "korean": "이 커피는 뜨거워요." },
+      { "english": "Let's get coffee.", "korean": "커피 마시러 가요." }
+    ],
+    "water": [
+      { "english": "Can I have some water?", "korean": "물 좀 받을 수 있을까요?" },
+      { "english": "The water is cold.", "korean": "물이 차가워요." },
+      { "english": "Please drink more water.", "korean": "물을 더 마셔 주세요." }
+    ],
+    "was": [
+      { "english": "The movie was good.", "korean": "그 영화는 좋았어요." },
+      { "english": "I was at home yesterday.", "korean": "저는 어제 집에 있었어요." },
+      { "english": "Was the flight on time?", "korean": "비행기가 제시간에 왔나요?" }
+    ],
+    "were": [
+      { "english": "We were early today.", "korean": "우리는 오늘 일찍 왔어요." },
+      { "english": "Were you busy yesterday?", "korean": "어제 바빴나요?" },
+      { "english": "They were at the cafe.", "korean": "그들은 카페에 있었어요." }
+    ],
+    "be": [
+      { "english": "Please be careful.", "korean": "조심하세요." },
+      { "english": "Be here at six.", "korean": "6시에 여기 와 있어요." },
+      { "english": "Just be yourself.", "korean": "그냥 당신답게 있어요." }
+    ],
+    "been": [
+      { "english": "I have been busy lately.", "korean": "요즘 바빴어요." },
+      { "english": "Have you been here before?", "korean": "여기에 전에 와본 적 있나요?" },
+      { "english": "It has been a long day.", "korean": "오늘은 긴 하루였어요." }
+    ],
+    "being": [
+      { "english": "Thank you for being here.", "korean": "여기 있어줘서 고마워요." },
+      { "english": "You are being very kind.", "korean": "정말 친절하게 대해주고 있네요." },
+      { "english": "Being on time is important.", "korean": "제시간에 오는 것은 중요해요." }
+    ],
+    "could": [
+      { "english": "Could you help me?", "korean": "도와주시겠어요?" },
+      { "english": "I could use some coffee.", "korean": "커피가 좀 필요해요." },
+      { "english": "Could we sit here?", "korean": "여기에 앉아도 될까요?" }
+    ],
+    "would": [
+      { "english": "Would you like some coffee?", "korean": "커피 좀 드릴까요?" },
+      { "english": "I would like the menu.", "korean": "메뉴를 보고 싶어요." },
+      { "english": "Would this time work for you?", "korean": "이 시간이 괜찮나요?" }
+    ],
+    "should": [
+      { "english": "You should get some rest.", "korean": "좀 쉬는 게 좋아요." },
+      { "english": "Where should I go?", "korean": "어디로 가야 하나요?" },
+      { "english": "We should leave now.", "korean": "우리는 지금 떠나는 게 좋겠어요." }
+    ],
+    "may": [
+      { "english": "May I come in?", "korean": "들어가도 될까요?" },
+      { "english": "It may rain later.", "korean": "나중에 비가 올 수도 있어요." },
+      { "english": "You may sit here.", "korean": "여기에 앉으셔도 돼요." }
+    ],
+    "might": [
+      { "english": "It might rain today.", "korean": "오늘 비가 올지도 몰라요." },
+      { "english": "I might be late.", "korean": "늦을지도 몰라요." },
+      { "english": "We might need a taxi.", "korean": "택시가 필요할지도 몰라요." }
+    ],
+    "must": [
+      { "english": "I must go now.", "korean": "저는 지금 가야 해요." },
+      { "english": "You must show your passport.", "korean": "여권을 보여줘야 해요." },
+      { "english": "This must be the place.", "korean": "여기가 맞는 곳일 거예요." }
+    ],
+    "have to": [
+      { "english": "I have to work tomorrow.", "korean": "저는 내일 일해야 해요." },
+      { "english": "Do we have to wait?", "korean": "기다려야 하나요?" },
+      { "english": "You have to try this.", "korean": "이건 꼭 해봐야 해요." }
+    ],
+    "need to": [
+      { "english": "I need to call my friend.", "korean": "친구에게 전화해야 해요." },
+      { "english": "We need to leave soon.", "korean": "우리는 곧 떠나야 해요." },
+      { "english": "Do I need to book ahead?", "korean": "미리 예약해야 하나요?" }
+    ],
+    "who": [
+      { "english": "Who is that?", "korean": "저 사람은 누구예요?" },
+      { "english": "Who can help me?", "korean": "누가 저를 도와줄 수 있나요?" },
+      { "english": "Who is next?", "korean": "다음은 누구인가요?" }
+    ],
+    "why": [
+      { "english": "Why are you late?", "korean": "왜 늦었나요?" },
+      { "english": "Why not try it?", "korean": "왜 해보지 않나요?" },
+      { "english": "Why is the store closed?", "korean": "가게가 왜 닫았나요?" }
+    ],
+    "how": [
+      { "english": "How are you today?", "korean": "오늘 어떻게 지내나요?" },
+      { "english": "How do I get there?", "korean": "거기에는 어떻게 가나요?" },
+      { "english": "How was your trip?", "korean": "여행은 어땠나요?" }
+    ],
+    "which": [
+      { "english": "Which one do you want?", "korean": "어느 것을 원하나요?" },
+      { "english": "Which bus goes downtown?", "korean": "어느 버스가 시내로 가나요?" },
+      { "english": "Which color do you like?", "korean": "어느 색을 좋아하나요?" }
+    ],
+    "whose": [
+      { "english": "Whose bag is this?", "korean": "이것은 누구 가방인가요?" },
+      { "english": "Whose turn is it?", "korean": "누구 차례인가요?" },
+      { "english": "Whose phone is ringing?", "korean": "누구 전화가 울리나요?" }
+    ],
+    "how much": [
+      { "english": "How much is this?", "korean": "이것은 얼마인가요?" },
+      { "english": "How much time do we have?", "korean": "시간이 얼마나 남았나요?" },
+      { "english": "How much does it cost?", "korean": "비용이 얼마인가요?" }
+    ],
+    "how many": [
+      { "english": "How many tickets do you need?", "korean": "표가 몇 장 필요하세요?" },
+      { "english": "How many people are coming?", "korean": "몇 명이 오나요?" },
+      { "english": "How many days will you stay?", "korean": "며칠 머무를 건가요?" }
+    ],
+    "in": [
+      { "english": "It is in the bag.", "korean": "그것은 가방 안에 있어요." },
+      { "english": "I am in the lobby.", "korean": "저는 로비에 있어요." },
+      { "english": "Please write it in English.", "korean": "영어로 적어 주세요." }
+    ],
+    "on": [
+      { "english": "The phone is on the table.", "korean": "휴대폰은 탁자 위에 있어요." },
+      { "english": "I am on my way.", "korean": "가는 중이에요." },
+      { "english": "Put your bag on the chair.", "korean": "가방을 의자 위에 놓으세요." }
+    ],
+    "at": [
+      { "english": "Meet me at six.", "korean": "6시에 만나요." },
+      { "english": "I am at the hotel.", "korean": "저는 호텔에 있어요." },
+      { "english": "See you at the gate.", "korean": "게이트에서 봐요." }
+    ],
+    "to": [
+      { "english": "Go to the gate.", "korean": "게이트로 가세요." },
+      { "english": "Talk to the staff.", "korean": "직원에게 말해 보세요." },
+      { "english": "Take me to the station.", "korean": "역까지 데려다 주세요." }
+    ],
+    "for": [
+      { "english": "This is for you.", "korean": "이것은 당신을 위한 거예요." },
+      { "english": "I am looking for the restroom.", "korean": "화장실을 찾고 있어요." },
+      { "english": "Thanks for your help.", "korean": "도와줘서 고마워요." }
+    ],
+    "from": [
+      { "english": "I am from Korea.", "korean": "저는 한국에서 왔어요." },
+      { "english": "The flight is from Seoul.", "korean": "그 비행기는 서울에서 출발해요." },
+      { "english": "Where are you from?", "korean": "어디에서 왔나요?" }
+    ],
+    "with": [
+      { "english": "Come with me.", "korean": "저와 함께 가요." },
+      { "english": "I am here with my family.", "korean": "가족과 함께 여기 있어요." },
+      { "english": "Coffee with milk, please.", "korean": "우유를 넣은 커피로 주세요." }
+    ],
+    "about": [
+      { "english": "Tell me about it.", "korean": "그것에 대해 말해 주세요." },
+      { "english": "What is this about?", "korean": "이것은 무엇에 관한 건가요?" },
+      { "english": "I am worried about the weather.", "korean": "날씨가 걱정돼요." }
+    ],
+    "of": [
+      { "english": "A cup of coffee, please.", "korean": "커피 한 잔 주세요." },
+      { "english": "What kind of food do you like?", "korean": "어떤 종류의 음식을 좋아하나요?" },
+      { "english": "This is one of my favorites.", "korean": "이것은 제가 좋아하는 것 중 하나예요." }
+    ],
+    "by": [
+      { "english": "Sit by me.", "korean": "제 옆에 앉으세요." },
+      { "english": "Can I pay by card?", "korean": "카드로 결제할 수 있나요?" },
+      { "english": "The store is by the station.", "korean": "가게는 역 옆에 있어요." }
+    ],
+    "after": [
+      { "english": "Call me after work.", "korean": "일 끝나고 전화해요." },
+      { "english": "Let's eat after the movie.", "korean": "영화 후에 먹어요." },
+      { "english": "Rest after you finish.", "korean": "끝난 후 쉬세요." }
+    ],
+    "before": [
+      { "english": "Wash your hands before you eat.", "korean": "먹기 전에 손을 씻으세요." },
+      { "english": "Call me before you leave.", "korean": "떠나기 전에 전화해요." },
+      { "english": "I have seen this before.", "korean": "이것을 전에 본 적 있어요." }
+    ],
+    "under": [
+      { "english": "It is under the bed.", "korean": "그것은 침대 아래에 있어요." },
+      { "english": "Look under the table.", "korean": "탁자 아래를 봐요." },
+      { "english": "The bag is under my chair.", "korean": "가방은 제 의자 아래에 있어요." }
+    ],
+    "over": [
+      { "english": "The plane flew over the city.", "korean": "비행기가 도시 위를 날았어요." },
+      { "english": "The meeting is over.", "korean": "회의가 끝났어요." },
+      { "english": "Put this over there.", "korean": "이것을 저쪽에 놓으세요." }
+    ],
+    "between": [
+      { "english": "It is between the doors.", "korean": "그것은 문들 사이에 있어요." },
+      { "english": "Sit between us.", "korean": "우리 사이에 앉으세요." },
+      { "english": "The cafe is between the bank and the store.", "korean": "카페는 은행과 가게 사이에 있어요." }
+    ],
+    "through": [
+      { "english": "Walk through the park.", "korean": "공원을 지나 걸어가세요." },
+      { "english": "Go through that door.", "korean": "저 문으로 지나가세요." },
+      { "english": "I looked through the menu.", "korean": "메뉴를 훑어봤어요." }
+    ],
+    "during": [
+      { "english": "No phones during the movie.", "korean": "영화 중에는 휴대폰을 쓰지 마세요." },
+      { "english": "I met her during the trip.", "korean": "여행 중에 그녀를 만났어요." },
+      { "english": "Please be quiet during class.", "korean": "수업 중에는 조용히 해주세요." }
+    ],
+    "without": [
+      { "english": "Coffee without sugar, please.", "korean": "설탕 없이 커피로 주세요." },
+      { "english": "I cannot live without music.", "korean": "음악 없이 살 수 없어요." },
+      { "english": "Do not leave without me.", "korean": "저 없이 가지 마세요." }
+    ],
+    "against": [
+      { "english": "Lean against the wall.", "korean": "벽에 기대세요." },
+      { "english": "The bike is against the fence.", "korean": "자전거는 울타리에 기대 있어요." },
+      { "english": "Do not push against the door.", "korean": "문을 밀지 마세요." }
+    ],
+    "among": [
+      { "english": "I feel safe among friends.", "korean": "친구들 사이에 있으면 안심돼요." },
+      { "english": "Choose one among these.", "korean": "이것들 중 하나를 고르세요." },
+      { "english": "She is popular among students.", "korean": "그녀는 학생들 사이에서 인기가 있어요." }
+    ],
+    "around": [
+      { "english": "Walk around the hotel.", "korean": "호텔 주변을 걸어보세요." },
+      { "english": "I will be there around noon.", "korean": "정오쯤 도착할게요." },
+      { "english": "Look around the room.", "korean": "방 주변을 둘러보세요." }
+    ],
+    "near": [
+      { "english": "The hotel is near the airport.", "korean": "호텔은 공항 근처에 있어요." },
+      { "english": "Is there a cafe near here?", "korean": "이 근처에 카페가 있나요?" },
+      { "english": "Please sit near me.", "korean": "제 가까이에 앉으세요." }
+    ],
+    "behind": [
+      { "english": "It is behind the door.", "korean": "그것은 문 뒤에 있어요." },
+      { "english": "The taxi is behind us.", "korean": "택시는 우리 뒤에 있어요." },
+      { "english": "Look behind the curtain.", "korean": "커튼 뒤를 봐요." }
+    ],
+    "inside": [
+      { "english": "Wait inside the building.", "korean": "건물 안에서 기다리세요." },
+      { "english": "It is warm inside.", "korean": "안은 따뜻해요." },
+      { "english": "Come inside, please.", "korean": "안으로 들어오세요." }
+    ],
+    "outside": [
+      { "english": "I will wait outside.", "korean": "밖에서 기다릴게요." },
+      { "english": "It is cold outside.", "korean": "밖은 추워요." },
+      { "english": "Meet me outside the store.", "korean": "가게 밖에서 만나요." }
+    ],
+    "across": [
+      { "english": "Walk across the street.", "korean": "길을 건너세요." },
+      { "english": "The bank is across from the cafe.", "korean": "은행은 카페 맞은편에 있어요." },
+      { "english": "There is a park across the road.", "korean": "길 건너에 공원이 있어요." }
+    ],
+    "along": [
+      { "english": "Walk along the river.", "korean": "강을 따라 걸어가세요." },
+      { "english": "There are shops along this street.", "korean": "이 거리에는 가게들이 있어요." },
+      { "english": "Keep walking along the path.", "korean": "길을 따라 계속 걸어가세요." }
+    ],
+    "toward": [
+      { "english": "Walk toward the station.", "korean": "역 쪽으로 걸어가세요." },
+      { "english": "The bus is moving toward us.", "korean": "버스가 우리 쪽으로 오고 있어요." },
+      { "english": "Turn toward the left.", "korean": "왼쪽 방향으로 도세요." }
+    ],
+    "into": [
+      { "english": "Come into the room.", "korean": "방 안으로 들어오세요." },
+      { "english": "Put it into the bag.", "korean": "그것을 가방 안에 넣으세요." },
+      { "english": "I ran into an old friend.", "korean": "오랜 친구를 우연히 만났어요." }
+    ],
+    "out of": [
+      { "english": "Get out of the car.", "korean": "차에서 내리세요." },
+      { "english": "I am out of cash.", "korean": "현금이 다 떨어졌어요." },
+      { "english": "Take it out of the box.", "korean": "상자에서 꺼내세요." }
+    ],
+    "and": [
+      { "english": "I like coffee and tea.", "korean": "저는 커피와 차를 좋아해요." },
+      { "english": "Come in and sit down.", "korean": "들어와서 앉으세요." },
+      { "english": "I called and left a message.", "korean": "전화하고 메시지를 남겼어요." }
+    ],
+    "but": [
+      { "english": "I am tired, but I am okay.", "korean": "피곤하지만 괜찮아요." },
+      { "english": "It is small but clean.", "korean": "작지만 깨끗해요." },
+      { "english": "I want to go, but I am busy.", "korean": "가고 싶지만 바빠요." }
+    ],
+    "or": [
+      { "english": "Coffee or tea?", "korean": "커피와 차 중 무엇으로 할까요?" },
+      { "english": "Would you like to walk or take a taxi?", "korean": "걷겠어요, 아니면 택시를 탈까요?" },
+      { "english": "You can call or text me.", "korean": "전화하거나 문자를 보내도 돼요." }
+    ],
+    "so": [
+      { "english": "It was late, so I left.", "korean": "늦어서 떠났어요." },
+      { "english": "I am hungry, so let's eat.", "korean": "배고프니 먹어요." },
+      { "english": "The bus was full, so we walked.", "korean": "버스가 꽉 차서 걸었어요." }
+    ],
+    "because": [
+      { "english": "I stayed because it rained.", "korean": "비가 와서 머물렀어요." },
+      { "english": "I am happy because you are here.", "korean": "당신이 여기 있어서 기뻐요." },
+      { "english": "We were late because of traffic.", "korean": "교통 때문에 늦었어요." }
+    ],
+    "if": [
+      { "english": "Call me if you need help.", "korean": "도움이 필요하면 전화하세요." },
+      { "english": "If it rains, stay inside.", "korean": "비가 오면 안에 있으세요." },
+      { "english": "Ask if you have questions.", "korean": "질문이 있으면 물어보세요." }
+    ],
+    "while": [
+      { "english": "Wait here while I check.", "korean": "제가 확인하는 동안 여기서 기다리세요." },
+      { "english": "I listened to music while I walked.", "korean": "걸으면서 음악을 들었어요." },
+      { "english": "Please wait while I call them.", "korean": "제가 전화하는 동안 기다려 주세요." }
+    ],
+    "although": [
+      { "english": "Although it was cold, we walked.", "korean": "추웠지만 걸었어요." },
+      { "english": "Although it is late, the cafe is open.", "korean": "늦었지만 카페는 열려 있어요." },
+      { "english": "Although I was tired, I enjoyed it.", "korean": "피곤했지만 즐거웠어요." }
+    ],
+    "though": [
+      { "english": "It is small, though it is nice.", "korean": "작지만 좋아요." },
+      { "english": "I like it, though it is expensive.", "korean": "비싸지만 마음에 들어요." },
+      { "english": "It was busy, though we found a seat.", "korean": "붐볐지만 자리를 찾았어요." }
+    ],
+    "unless": [
+      { "english": "Do not go unless I call.", "korean": "제가 연락하지 않으면 가지 마세요." },
+      { "english": "The store is open unless it is a holiday.", "korean": "휴일이 아니면 가게는 열어요." },
+      { "english": "I will not leave unless you are ready.", "korean": "당신이 준비되지 않으면 떠나지 않을게요." }
+    ],
+    "until": [
+      { "english": "Wait until five.", "korean": "5시까지 기다리세요." },
+      { "english": "Stay here until I return.", "korean": "제가 돌아올 때까지 여기 있어요." },
+      { "english": "The cafe is open until ten.", "korean": "카페는 10시까지 열어요." }
+    ],
+    "since": [
+      { "english": "I have been here since Monday.", "korean": "월요일부터 여기 있었어요." },
+      { "english": "Since you are here, let's eat.", "korean": "여기 왔으니 먹어요." },
+      { "english": "I have known her since school.", "korean": "학교 때부터 그녀를 알았어요." }
+    ],
+    "as": [
+      { "english": "Do as I say.", "korean": "제가 말한 대로 하세요." },
+      { "english": "As I was leaving, it started to rain.", "korean": "떠나려는데 비가 오기 시작했어요." },
+      { "english": "Use this as a map.", "korean": "이것을 지도처럼 사용하세요." }
+    ],
+    "than": [
+      { "english": "This is better than that.", "korean": "이것이 저것보다 더 좋아요." },
+      { "english": "The train is faster than the bus.", "korean": "기차가 버스보다 더 빨라요." },
+      { "english": "It was easier than I expected.", "korean": "생각보다 쉬웠어요." }
+    ],
+    "whether": [
+      { "english": "I do not know whether it is open.", "korean": "열려 있는지 모르겠어요." },
+      { "english": "Please check whether the room is ready.", "korean": "방이 준비됐는지 확인해 주세요." },
+      { "english": "I am not sure whether to go.", "korean": "갈지 말지 잘 모르겠어요." }
+    ],
+    "both ... and": [
+      { "english": "I like both coffee and tea.", "korean": "커피와 차 둘 다 좋아해요." },
+      { "english": "Both the room and the view are nice.", "korean": "방과 전망 둘 다 좋아요." },
+      { "english": "We can visit both today and tomorrow.", "korean": "오늘과 내일 모두 방문할 수 있어요." }
+    ],
+    "either ... or": [
+      { "english": "Either today or tomorrow is fine.", "korean": "오늘이나 내일 중 아무 때나 괜찮아요." },
+      { "english": "You can choose either coffee or tea.", "korean": "커피나 차 중 하나를 고르세요." },
+      { "english": "Either call or text me.", "korean": "전화하거나 문자를 보내세요." }
+    ]
+  }
+}

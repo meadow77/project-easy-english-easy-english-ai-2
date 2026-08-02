@@ -12,6 +12,11 @@ export type Word = {
   exampleTranslation: string;
 };
 
+export type WordExample = {
+  english: string;
+  korean: string;
+};
+
 export type WordProgress = {
   repetitions: number;
   correctStreak: number;
@@ -27,7 +32,7 @@ export type LearningStats = {
   lastStudyDate?: string;
 };
 
-export type TestMode = 'en-ko' | 'ko-en' | 'listening' | 'speaking';
+export type TestMode = 'en-ko' | 'ko-en' | 'listening' | 'speaking' | 'sentence';
 
 export type TestResult = {
   id: string;

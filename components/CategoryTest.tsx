@@ -147,8 +147,8 @@ export default function CategoryTest({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-end justify-center bg-slate-950/45 sm:items-center sm:p-5" role="dialog" aria-modal="true" aria-label={`${title} 시험`}>
-      <div className="max-h-[94dvh] w-full max-w-lg overflow-y-auto rounded-t-[30px] bg-background px-5 pb-[calc(1.25rem+env(safe-area-inset-bottom))] pt-5 shadow-2xl sm:rounded-[30px]">
+    <div className="fixed inset-0 z-[100] min-h-[100dvh] overflow-y-auto bg-[var(--background)]" role="dialog" aria-modal="true" aria-label={`${title} 시험`}>
+      <div className="mx-auto min-h-[100dvh] w-full max-w-xl bg-[var(--background)] px-5 pb-[calc(1.5rem+env(safe-area-inset-bottom))] pt-[calc(1.25rem+env(safe-area-inset-top))]">
         <div className="flex items-center justify-between gap-3">
           <div>
             <p className="text-xs font-extrabold text-leaf">단어 시험</p>

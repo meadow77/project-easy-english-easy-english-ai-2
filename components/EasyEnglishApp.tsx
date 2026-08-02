@@ -19,8 +19,8 @@ import {
 } from '@/src/lib/storage';
 import type { PartOfSpeech, StoredState, Tab, TestResult, Word } from '@/src/types';
 import AppIcon, { type AppIconName } from './AppIcon';
-import AutoStudyPlayer from './AutoStudyPlayer';
 import CategoryTest from './CategoryTest';
+import SentenceTest from './SentenceTest';
 import WordCard from './WordCard';
 import WordListRow from './WordListRow';
 import type { WordStudyProps } from './word-study-types';
@@ -33,7 +33,7 @@ const tabs: { id: Tab; label: string; icon: AppIconName }[] = [
   { id: 'search', label: '검색', icon: 'search' },
 ];
 
-type TestConfig = { title: string; words: Word[] };
+type TestConfig = { title: string; words: Word[]; kind: 'word' | 'sentence' };
 type SelectedPart = PartOfSpeech | '전체';
 type CompletionFilter = 'all' | 'learned' | 'unlearned';
 
@@ -141,8 +141,6 @@ export default function EasyEnglishApp() {
             masteredCount={masteredCount}
             completionRate={completionRate}
             completedSet={completedSet}
-            favoriteSet={favoriteSet}
-            wrongSet={wrongSet}
             started={todayStarted}
             getProps={getProps}
             onStart={() => {
@@ -153,7 +151,8 @@ export default function EasyEnglishApp() {
             onOpenReview={() => setTab('review')}
             onOpenFavorites={() => setTab('favorites')}
             onOpenSearch={() => setTab('search')}
-            onStartTest={(title, testWords) => setTestConfig({ title, words: testWords })}
+            onStartTest={(title, testWords) => setTestConfig({ title, words: testWords, kind: 'word' })}
+            onStartSentenceTest={(title, testWords) => setTestConfig({ title, words: testWords, kind: 'sentence' })}
           />
         )}
 
@@ -163,12 +162,11 @@ export default function EasyEnglishApp() {
             selectedCategory={selectedCategory}
             filteredWords={filteredWords}
             completedSet={completedSet}
-            favoriteSet={favoriteSet}
-            wrongSet={wrongSet}
             getProps={getProps}
             onPartChange={changePart}
             onCategoryChange={setSelectedCategory}
-            onStartTest={(title, testWords) => setTestConfig({ title, words: testWords })}
+            onStartTest={(title, testWords) => setTestConfig({ title, words: testWords, kind: 'word' })}
+            onStartSentenceTest={(title, testWords) => setTestConfig({ title, words: testWords, kind: 'sentence' })}
             onSetCompleted={setCollectionCompleted}
           />
         )}
@@ -181,7 +179,7 @@ export default function EasyEnglishApp() {
             completedSet={completedSet}
             getProps={getProps}
             onModeChange={setReviewMode}
-            onStartWrongTest={() => setTestConfig({ title: '오답 단어', words: wrongWords.filter((word) => completedSet.has(word.id)) })}
+            onStartWrongTest={() => setTestConfig({ title: '오답 단어', words: wrongWords.filter((word) => completedSet.has(word.id)), kind: 'word' })}
           />
         )}
 
@@ -201,7 +199,8 @@ export default function EasyEnglishApp() {
         </div>
       </nav>
 
-      {testConfig && <CategoryTest title={testConfig.title} words={testConfig.words} allWords={words} onClose={() => setTestConfig(null)} onComplete={handleTestComplete} />}
+      {testConfig?.kind === 'word' && <CategoryTest title={testConfig.title} words={testConfig.words} allWords={words} onClose={() => setTestConfig(null)} onComplete={handleTestComplete} />}
+      {testConfig?.kind === 'sentence' && <SentenceTest title={testConfig.title} words={testConfig.words} allWords={words} onClose={() => setTestConfig(null)} onComplete={handleTestComplete} />}
     </div>
   );
 }
@@ -214,8 +213,6 @@ function TodayPage({
   masteredCount,
   completionRate,
   completedSet,
-  favoriteSet,
-  wrongSet,
   started,
   getProps,
   onStart,
@@ -224,6 +221,7 @@ function TodayPage({
   onOpenFavorites,
   onOpenSearch,
   onStartTest,
+  onStartSentenceTest,
 }: {
   state: StoredState;
   dueCount: number;
@@ -232,8 +230,6 @@ function TodayPage({
   masteredCount: number;
   completionRate: number;
   completedSet: Set<string>;
-  favoriteSet: Set<string>;
-  wrongSet: Set<string>;
   started: boolean;
   getProps: (word: Word) => WordStudyProps;
   onStart: () => void;
@@ -242,6 +238,7 @@ function TodayPage({
   onOpenFavorites: () => void;
   onOpenSearch: () => void;
   onStartTest: (title: string, testWords: Word[]) => void;
+  onStartSentenceTest: (title: string, testWords: Word[]) => void;
 }) {
   const todayRate = Math.round((completedToday / Math.max(todayWords.length, 1)) * 100);
   return (
@@ -281,17 +278,22 @@ function TodayPage({
         <div className="grid grid-cols-2 gap-2">
           <LearningStep order="1" icon="check" title="체크" description="아는 단어 표시" />
           <LearningStep order="2" icon="listen" title="듣기" description="영어와 뜻 듣기" />
-          <LearningStep order="3" icon="speak" title="말하기" description="따라 말해보기" />
-          <LearningStep order="4" icon="example" title="예문" description="문장으로 확인" />
-          <LearningStep order="5" icon="play" title="전체 재생" description="자동 반복 듣기" />
-          <LearningStep order="6" icon="test" title="시험" description="오답은 자동 저장" />
-          <LearningStep order="7" icon="note" title="오답복습" description="틀린 단어 다시 보기" />
+          <LearningStep order="3" icon="example" title="예문" description="문장으로 확인" />
+          <LearningStep order="4" icon="test" title="단어 시험" description="오답은 자동 저장" />
+          <LearningStep order="5" icon="test" title="문장 시험" description="빈칸에 단어 넣기" />
+          <LearningStep order="6" icon="note" title="오답복습" description="틀린 단어 다시 보기" />
         </div>
-        <AutoStudyPlayer className="mt-4" words={todayWords} completedIds={completedSet} favoriteIds={favoriteSet} wrongIds={wrongSet} />
         <div className="mt-4">
-          <StudyHeader title="오늘의 단어" completed={completedToday} total={todayWords.length} eligibleCount={completedToday} onStartTest={() => onStartTest('오늘의 학습', todayWords.filter((word) => completedSet.has(word.id)))} />
+          <StudyHeader
+            title="오늘의 단어"
+            completed={completedToday}
+            total={todayWords.length}
+            eligibleCount={completedToday}
+            onStartTest={() => onStartTest('오늘의 학습', todayWords.filter((word) => completedSet.has(word.id)))}
+            onStartSentenceTest={() => onStartSentenceTest('오늘의 학습', todayWords.filter((word) => completedSet.has(word.id)))}
+          />
         </div>
-        <p className="mb-3 mt-4 text-[11px] font-semibold leading-4 text-muted">왼쪽 체크 · 듣기 · 말하기 · 예문 · 오답노트 순서로 학습하세요.</p>
+        <p className="mb-3 mt-4 text-sm font-semibold leading-5 text-muted">왼쪽 체크 · 듣기 · 예문 · 오답노트 순서로 학습하세요.</p>
         <WordCollection words={todayWords} getProps={getProps} layout="list" />
       </section>}
     </div>
@@ -303,24 +305,22 @@ function WordsPage({
   selectedCategory,
   filteredWords,
   completedSet,
-  favoriteSet,
-  wrongSet,
   getProps,
   onPartChange,
   onCategoryChange,
   onStartTest,
+  onStartSentenceTest,
   onSetCompleted,
 }: {
   selectedPart: SelectedPart;
   selectedCategory: string;
   filteredWords: Word[];
   completedSet: Set<string>;
-  favoriteSet: Set<string>;
-  wrongSet: Set<string>;
   getProps: (word: Word) => WordStudyProps;
   onPartChange: (part: SelectedPart) => void;
   onCategoryChange: (category: string) => void;
   onStartTest: (title: string, words: Word[]) => void;
+  onStartSentenceTest: (title: string, words: Word[]) => void;
   onSetCompleted: (wordIds: string[], completed: boolean) => void;
 }) {
   const [filter, setFilter] = useState<CompletionFilter>('all');
@@ -353,17 +353,21 @@ function WordsPage({
         </div>
       ) : (
         <div className="mt-5">
-          <StudyHeader title={title} completed={completedCount} total={filteredWords.length} eligibleCount={eligibleWords.length} onStartTest={() => onStartTest(title, eligibleWords)} />
+          <StudyHeader
+            title={title}
+            completed={completedCount}
+            total={filteredWords.length}
+            eligibleCount={eligibleWords.length}
+            onStartTest={() => onStartTest(title, eligibleWords)}
+            onStartSentenceTest={() => onStartSentenceTest(title, eligibleWords)}
+          />
           <WordbookControls
             words={filteredWords}
             completedSet={completedSet}
-            favoriteSet={favoriteSet}
-            wrongSet={wrongSet}
             filter={filter}
             onFilterChange={setFilter}
             onSetCompleted={onSetCompleted}
           />
-          <p className="mb-3 mt-4 whitespace-nowrap text-[11px] leading-4 text-muted">체크 · 듣기(영어+뜻) · 말하기 · 예문 · 오답노트</p>
           <WordCollection words={visibleWords} getProps={getProps} layout={layout} />
         </div>
       )}
@@ -374,16 +378,12 @@ function WordsPage({
 function WordbookControls({
   words: collection,
   completedSet,
-  favoriteSet,
-  wrongSet,
   filter,
   onFilterChange,
   onSetCompleted,
 }: {
   words: Word[];
   completedSet: Set<string>;
-  favoriteSet: Set<string>;
-  wrongSet: Set<string>;
   filter: CompletionFilter;
   onFilterChange: (filter: CompletionFilter) => void;
   onSetCompleted: (wordIds: string[], completed: boolean) => void;
@@ -398,20 +398,19 @@ function WordbookControls({
 
   return (
     <div className="mt-4">
-      <div className="rounded-3xl border border-emerald-100 bg-white p-3 shadow-sm">
+      <div className="flex flex-col rounded-3xl border border-emerald-100 bg-white p-3 shadow-sm">
         <div className="flex items-center justify-between gap-3">
           <p className="text-xs font-extrabold text-muted">선택 상태 {selectedCount} / {collection.length}</p>
           <span className="flex items-center gap-1 text-xs font-bold text-leaf"><AppIcon name="filter" size={14} /> 빠른 필터</span>
         </div>
-        <div className="mt-3 grid grid-cols-2 gap-2">
+        <div className="order-2 mt-3 grid grid-cols-2 gap-2">
           <button type="button" onClick={() => onSetCompleted(ids, true)} disabled={!collection.length} className="flex min-h-11 items-center justify-center gap-1.5 rounded-2xl bg-emerald-50 text-xs font-black text-leaf active:scale-[.98] disabled:opacity-50"><AppIcon name="check" size={16} /> 전체 선택</button>
           <button type="button" onClick={() => onSetCompleted(ids, false)} disabled={!selectedCount} className="flex min-h-11 items-center justify-center gap-1.5 rounded-2xl bg-slate-100 text-xs font-black text-muted active:scale-[.98] disabled:opacity-50"><AppIcon name="uncheck" size={16} /> 전체 선택 해제</button>
         </div>
-        <div className="mt-3 flex gap-1.5 overflow-x-auto pb-1 scrollbar-none" role="group" aria-label="단어 학습 상태 필터">
+        <div className="order-1 mt-3 flex gap-1.5 overflow-x-auto pb-1 scrollbar-none" role="group" aria-label="단어 학습 상태 필터">
           {filters.map((item) => <button key={item.id} type="button" onClick={() => onFilterChange(item.id)} className={`min-h-9 shrink-0 rounded-xl px-3 text-xs font-extrabold active:scale-[.98] ${filter === item.id ? 'bg-leaf text-white' : 'bg-slate-50 text-muted'}`}>{item.label}</button>)}
         </div>
       </div>
-      <AutoStudyPlayer className="mt-3" words={collection} completedIds={completedSet} favoriteIds={favoriteSet} wrongIds={wrongSet} />
     </div>
   );
 }
@@ -458,7 +457,7 @@ function WordCollection({ words: collection, getProps, layout }: { words: Word[]
   return <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">{collection.map((word, index) => <WordListRow key={word.id} index={index + 1} {...getProps(word)} />)}</div>;
 }
 
-function StudyHeader({ title, completed, total, eligibleCount, onStartTest }: { title: string; completed: number; total: number; eligibleCount: number; onStartTest: () => void }) {
+function StudyHeader({ title, completed, total, eligibleCount, onStartTest, onStartSentenceTest }: { title: string; completed: number; total: number; eligibleCount: number; onStartTest: () => void; onStartSentenceTest: () => void }) {
   const rate = Math.round((completed / Math.max(total, 1)) * 100);
   return (
     <div className="rounded-3xl bg-white p-4 shadow-soft">
@@ -467,6 +466,7 @@ function StudyHeader({ title, completed, total, eligibleCount, onStartTest }: { 
         <button type="button" disabled={eligibleCount === 0} onClick={onStartTest} className="flex min-h-12 shrink-0 items-center gap-1.5 rounded-2xl bg-ink px-4 text-sm font-black text-white active:scale-95 disabled:bg-slate-300"><AppIcon name="test" size={16} /> 시험 보기</button>
       </div>
       <div className="mt-4 h-2.5 overflow-hidden rounded-full bg-slate-100"><div className="h-full rounded-full bg-leaf transition-all" style={{ width: `${rate}%` }} /></div>
+      <button type="button" disabled={eligibleCount === 0} onClick={onStartSentenceTest} className="mt-3 flex min-h-12 w-full items-center justify-center gap-1.5 rounded-2xl border border-emerald-200 bg-mint px-4 text-base font-black text-leaf active:scale-95 disabled:opacity-50"><AppIcon name="example" size={18} /> 문장 시험</button>
       <p className="mt-2 text-right text-[11px] font-semibold text-muted">체크한 {eligibleCount}개 단어가 시험 대상</p>
     </div>
   );
